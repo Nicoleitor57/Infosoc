@@ -1,0 +1,27 @@
+.header {
+  align-items: center;
+  background-color: #37343B;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0px 64px;
+  right: 0;
+}
+
+.logo {
+  width: 72px;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.button {
+  background-color: #37343B;
+  border: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
