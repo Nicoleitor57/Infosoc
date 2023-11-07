@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import RoleSelectionPage from './RoleSelectionPage';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Admin from './Admin';
 import AdminLoginPage from './AdminLoginPage';
-import TutorLoginPage from './TutorLoginPage';
 import CoordinadorLoginPage from './CoordinadorLoginPage';
+import RoleSelectionPage from './RoleSelectionPage';
+import TutorLoginPage from './TutorLoginPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/AdminLoginPage" element={<AdminLoginPage />} />
           <Route path="/TutorLoginPage" element={<TutorLoginPage />} />
           <Route path="/CoordinadorLoginPage" element={<CoordinadorLoginPage />} />
+          <Route path="/Admin" element={<Admin />} />
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,68 @@
+.turno {
+  align-items: center;
+  background-color: #F7F7F7;
+  border-radius: 8px;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  padding: 32px 48px 32px 48px;
+  width: 700px;
+}
+
+.info {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+
+}
+
+.image {
+  align-items: center;
+  background-color: #B0DDF7;
+  border-radius: 6px;
+  color: #4286AC;
+  display: flex;
+  font-size: 32px;
+  font-weight: 500;
+  height: 54px;
+  justify-content: center;
+  width: 54px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  color: #1E1E1E;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.type {
+  color: #5D5D5D;
+  font-size: 14px;
+}
+
+.state1 {
+  border: solid 1px #60BB58;
+  border-radius: 24px;
+  color: #60BB58;
+  padding: 8px 16px;
+}
+
+.state2 {
+  border: solid 1px #D43131;
+  border-radius: 24px;
+  color: #D43131;
+  padding: 8px 16px;
+}
+
+.state3 {
+  border: solid 1px #4277DE;
+  border-radius: 24px;
+  color: #4277DE;
+  padding: 8px 16px;
+}
