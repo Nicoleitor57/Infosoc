@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Modal from 'react-modal';
 import App from './App';
-import './index.css';
+import './css_files/index.css';
 import reportWebVitals from './reportWebVitals';
 import './styles.css';
 Modal.setAppElement("#root");

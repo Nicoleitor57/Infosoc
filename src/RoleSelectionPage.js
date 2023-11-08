@@ -6,6 +6,10 @@ import ciacpng from './images/Ciac.png';
 
 function RoleSelectionPage() {
 
+  const [selectedRole, setSelectedRole] = React.useState(''); 
+  const handleRoleSelection = (e) => {
+    setSelectedRole(e.target.value);
+  };
   const roleSelectionStyle = {
     backgroundImage: `url(${frame_2})`,
     backgroundSize: '100% 100%',
@@ -35,19 +39,18 @@ function RoleSelectionPage() {
     paddingLeft: '50px',
     paddingRight: '50px',
     borderRadius: '10px',
-    boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
 
   };
 
   const smallerTextStyle = {
     fontSize: '14px', 
-    textalign: 'center',
+    textAlign: 'center',
   };
 
   const linkStyle = {
     textDecoration: 'none',
     color: 'white',
-    textalign: 'center',
+    textAlign: 'center',
     linkStyle: 'center'
   };
 
@@ -60,26 +63,30 @@ function RoleSelectionPage() {
     cursor: 'pointer',
   };
   
+  const alignCenter = {
+    textAlign: 'center',
+  };
+  
   return (
     <div className="role-selection" style={roleSelectionStyle}>
       <div style={constentStyle}>
         <a href="/" alt="Image Button" style={CiacStyle}> {/*agregar link del logo*/}
           <img src={ciacpng} alt="Image Button" style={CiacStyle} />
         </a>
-        <h2>¡Bienvenido!</h2>
-        <p style={{...smallerTextStyle,  textalign: 'center'}}>
+        <h2 style={alignCenter}>¡Bienvenido!</h2>
+        <p style={{...smallerTextStyle,  textAlign: 'center'}}>
           ¿Que eres?
         </p>
         <div className="role-options">
           <p style={roleOptionsStyle}>
             {/* <a href="/AdminLoginPage" className="link">Administrador</a> */}
-            <Link to="/AdminLoginPage" style={linkStyle} >Administrador</Link>
+            <Link to="/AdminLoginPage" onClick={() => handleRoleSelection('Administrador')} style={linkStyle} >Administrador</Link>
           </p>
           <p style={roleOptionsStyle}>
-          <Link to="/TutorLoginPage" style={linkStyle}>Tutor</Link>
+          <Link to="/TutorLoginPage" onClick={() =>handleRoleSelection('Tutor')} style={linkStyle}>Tutor</Link>
           </p>
           <p style={roleOptionsStyle}>
-          <Link to="/CoordinadorLoginPage" style={linkStyle} >Coordinador</Link>
+          <Link to="/CoordinadorLoginPage" onClick={() =>handleRoleSelection('Coordinador')} style={linkStyle} >Coordinador</Link>
           </p>
         </div>
       </div>
