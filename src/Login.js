@@ -21,7 +21,8 @@ function Login({ role }) {
     console.log(`Logged in as ${role} with username: ${username}`);
 
     // redirigir a las paginas correspondientes
-    switch (role) {
+    switch (Role) {
+
       case 'Admin':
         navigate('/Admin'); // redirect a Admin
         break;
