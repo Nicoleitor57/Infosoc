@@ -1,0 +1,71 @@
+.modal {
+  border: solid 1px #C1C0C0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 48px; 
+  width: 400px;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+.codigoQR {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input {
+  border: solid 1px #C1C0C0;
+  border-radius: 8px;
+  height: 48px;
+}
+
+.buttons {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+}
+
+.button {
+  background-color: #37343B;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 18px 32px;
+}
+
+.button2 {
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  color: #37343B;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 18px 32px;
+  text-decoration: underline;
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  padding: 24px;
+}

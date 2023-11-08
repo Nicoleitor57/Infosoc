@@ -1,0 +1,28 @@
+.wrapper {
+  padding: 80px 120px;
+}
+
+.horario {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.materia {
+  background-color: #5DB4E6;
+  width: 100%;
+}
+
+.days {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.day {
+  background-color: #37343B;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  padding: 12px 56px;
+}

@@ -1,0 +1,12 @@
+.box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 62;
+  width: 174;
+
+}
+
+.type {
+  font-size: 14px;
+}

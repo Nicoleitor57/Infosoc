@@ -1,5 +1,6 @@
 .wrapper {
   padding: 80px 120px;
+  position: relative;
 }
 
 .box {
@@ -24,12 +25,21 @@
   border: none;
   border-radius: 10px;
   color: white;
+  cursor: pointer;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   padding: 18px 32px;
   width: 100%;
 }
 
+.modal {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 
 
