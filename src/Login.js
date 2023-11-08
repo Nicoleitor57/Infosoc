@@ -1,20 +1,43 @@
 import React, { useState } from 'react';
 import testUser from './testUser';
 import frame_2 from './images/Frame_2.png';
-import { useHistory } from 'react-router-dom';
 import ciacpng from './images/Ciac.png';  
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 
 function Login({ role }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIN, setLoggedIN] = useState(false);
+  const navigate = useNavigate();
 
   const URLvariable = window.location.href;
   const parts = URLvariable.split('/');
   const lastSegment = parts.pop() || parts.pop();
   const lastSegmentMayus = lastSegment.split(/(?=[A-Z])/)
   const Role = lastSegmentMayus[0];
+
+  // implemenar logica real, no este meme
+  if (username === testUser.username && password === testUser.password) {
+    console.log(`Logged in as ${role} with username: ${username}`);
+
+    // redirigir a las paginas correspondientes
+    switch (role) {
+      case 'Admin':
+        navigate('/Admin'); // redirect a Admin
+        break;
+      case 'Tutor':
+        navigate('/LoggedInPage'); // 
+        break;
+      case 'Coordinador':
+        navigate('/LoggedInPage'); // 
+        break;
+      default:
+        console.log('Invalid role');
+    }
+  } else {
+    console.log('Invalid credentials');
+  }
+
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
