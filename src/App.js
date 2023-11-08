@@ -5,12 +5,14 @@ import AdminLoginPage from './AdminLoginPage';
 import CoordinadorLoginPage from './CoordinadorLoginPage';
 import RoleSelectionPage from './RoleSelectionPage';
 import TutorLoginPage from './TutorLoginPage';
+import Login from './Login';
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Routes>
+          <Route path="/yourRoute/:URLvariable" element={<Login />} />
           <Route path="/" element={<RoleSelectionPage />} />
           <Route path="/AdminLoginPage" element={<AdminLoginPage />} />
           <Route path="/TutorLoginPage" element={<TutorLoginPage />} />
