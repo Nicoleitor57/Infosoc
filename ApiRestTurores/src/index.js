@@ -24,6 +24,7 @@ app.get('/', (req,res) =>{
 })
 
 //mongodb connection
+//Saludos a los papus
 
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log("Conneted to MONGODB")).catch((error) => console.error(error));
 
