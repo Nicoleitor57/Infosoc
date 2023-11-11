@@ -1,16 +1,66 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import s from './Admin.module.css';
 import Header from "./components/Header/Header";
 import InfoBloque from "./components/InfoBloque/InfoBloque";
 import Modal from "./components/Modal/Modal";
 import Turno from "./components/Turno/Turno";
 import './styles.css';
+import axios from 'axios';
 
-const Arreglo = [{"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor" : "Tutor/a de Mat/Fis"}, {"nombre":"Sofia Rios", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis"}];
+// const Arreglo = [{"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor" : "Tutor/a de Mat/Fis"}, {"nombre":"Sofia Rios", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis"}];
 
 
 function Admin() {
   const [mostrarModal, setMostrarModal] = useState(false);
+  const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    // Realiza una solicitud GET a la API
+    axios.get('http://localhost:9000/api/tutores')
+      .then(response => {
+        const apiData = response.data;
+        console.log('Data de la API:', apiData); // Muestra la data en la consola
+        setData(apiData); // Almacena los datos en el estado del componente
+      })
+      .catch(error => {
+        console.error('Error al obtener datos de la API', error);
+      });
+  }, []);
+
+  const actualizarDatos = () => {
+    const id = data._id;
+    const nuevoEstado = {
+      Estado: 1
+    }
+    const apiUrl = `http://localhost:9000/api/tutores/state/654be25c63b825b26dcf8642`;
+
+    const requestOptions = {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(nuevoEstado),
+    };
+
+    return fetch(apiUrl, requestOptions)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error al actualizar datos: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        window.location.reload();
+        console.log('Datos actualizados con éxito', data);
+        return data;
+      })
+      .catch(error => {
+        console.error('Error en la solicitud:', error);
+        throw error;
+      });
+  };
+
+  
 
   const abrirModal = () => {
     setMostrarModal(true);
@@ -20,6 +70,8 @@ function Admin() {
     setMostrarModal(false);
   };
 
+
+
   return(
     <>
     <Header/>
@@ -27,14 +79,23 @@ function Admin() {
       <h1>Turnos actuales</h1>
       <div className={s.box}>
         <div className={s.turnos}>
-          {Arreglo.map((item) => (         
-            <Turno name={item.nombre} tipoTutor={item.tipoTutor} state={item.estado}/>
-          ))};
+        {data.map((item) => (         
+          <Turno
+            name={item.name}
+            tipoTutor={item.tipoTutor}
+            state={
+              item.Estado === 0 ? 'Ausente' :
+              item.Estado === 1 ? 'En turno' :
+              item.Estado === 2 ? 'Reemplazado' :
+              'Estado desconocido'
+            }
+          />
+        ))}
         </div>
         <div className={s.block}>
           <InfoBloque name="Axel Kaempffer" bloque="3-4"/>
           <button className={s.button} onClick={abrirModal}>Ingresar turno</button>
-          <button className={s.button}>Ingresar reemplazo</button>
+          <button className={s.button} onClick={actualizarDatos}>Ingresar reemplazo</button>
         </div>
       </div>
       <div>
