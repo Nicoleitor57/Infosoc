@@ -1,0 +1,97 @@
+[33mcommit fad079de7c5fd0317d10312bd6fa56b98720ab54[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/ramaBackend[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Your Name <you@example.com>
+Date:   Sat Nov 11 15:10:22 2023 -0300
+
+    Poyer
+
+[33mcommit 468b3231a83db0580d737295562baac017a6d5bf[m
+Author: Your Name <you@example.com>
+Date:   Sat Nov 11 14:40:28 2023 -0300
+
+    Subido el backend
+
+[33mcommit 3f50f77ba755f402c248446c9a70fd55d52fc1a3[m
+Author: Your Name <you@example.com>
+Date:   Sat Nov 11 14:34:52 2023 -0300
+
+    Subiendo los cambios de la vista del admin conectado con la API
+
+[33mcommit c623065a3f6948c77faa9594751f2635bcad2661[m
+Author: Francisca Figueroa <fcafigueroal@gmail.com>
+Date:   Wed Nov 8 16:48:26 2023 -0300
+
+    feat: admin
+
+[33mcommit 85c9b6ad557cf48db8253de99e1369f8d0746cab[m
+Merge: f2543e6 778dbf8
+Author: Francisca Figueroa <fcafigueroal@gmail.com>
+Date:   Wed Nov 8 16:47:42 2023 -0300
+
+    Merge branch 'master' of https://github.com/Nicoleitor57/Infosoc
+
+[33mcommit f2543e6712e510f985a43e71854e707222c11b7a[m
+Author: Francisca Figueroa <fcafigueroal@gmail.com>
+Date:   Wed Nov 8 16:42:39 2023 -0300
+
+    feat: page coordinador and admin
+
+[33mcommit 778dbf855eea1b82eafb0e1b16f90ab9444e379f[m
+Author: Nicoleitor57 <nicoschiaffi@gmail.com>
+Date:   Wed Nov 8 00:21:28 2023 -0300
+
+    ahora si, arregle la wea, era una mayuscula en
+    la variable Role
+
+[33mcommit 3fec27bef5ec1ae564c835e0c02b77458263c971[m
+Author: Nicoleitor57 <nicoschiaffi@gmail.com>
+Date:   Wed Nov 8 00:16:20 2023 -0300
+
+    no reconoce apropiadamente quien esta ingresando,
+    si es admin, tutor o coordinador, piensa que todos son admin,
+    por lo que no redirige de manera apropiadamente
+    :|
+
+[33mcommit 99a855566cc72d82d0991b2d3cb8e117d0bc774a[m
+Author: Nicoleitor57 <nicoschiaffi@gmail.com>
+Date:   Tue Nov 7 22:58:48 2023 -0300
+
+    :P
+
+[33mcommit 8bb02cdd354e676c098e056b8f90fb3b482a6e28[m
+Merge: 2b8c3fe 5a462d9
+Author: Francisca Figueroa <fcafigueroal@gmail.com>
+Date:   Tue Nov 7 20:39:52 2023 -0300
+
+    feat: page admin
+
+[33mcommit 2b8c3fee35e91eed6aaf0d57e64e92a7f0260aa0[m
+Author: Francisca Figueroa <fcafigueroal@gmail.com>
+Date:   Tue Nov 7 20:36:27 2023 -0300
+
+    feat: admin page
+
+[33mcommit 0718f64d8d7ef447ef0dfed0e9a86f01cc52e65b[m
+Author: Francisca Figueroa <fcafigueroal@gmail.com>
+Date:   Tue Nov 7 20:36:08 2023 -0300
+
+    feat: header components
+
+[33mcommit 5a462d9ee61e3033e4666a5556e69887abf1e236[m
+Author: Nicoleitor57 <nicoschiaffi@gmail.com>
+Date:   Tue Nov 7 00:47:11 2023 -0300
+
+    portal ciac, falta centrar, wea troll
+
+[33mcommit ea16579f6909d71dd48aac26d1feb55d5b7fc7f3[m
+Author: Nicoleitor57 <nicoschiaffi@gmail.com>
+Date:   Mon Nov 6 22:24:37 2023 -0300
+
+    seleccion de usuario y login, sin diseño ni
+    funcionalidad real, falta la logica de autenticacion y demas
+    trabajare en el diseño correspondiente a cada pagina
+
+[33mcommit b826e927ec72ff41660e9bce671ff06f01c8e13b[m
+Author: Nicoleitor57 <nicoschiaffi@gmail.com>
+Date:   Thu Nov 2 19:54:42 2023 -0300
+
+    Initialize project using Create React App
