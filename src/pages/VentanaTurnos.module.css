@@ -1,0 +1,558 @@
+.estadsticasDelMes,
+.holaSkelia {
+  position: absolute;
+  top: 192px;
+  left: calc(50% - 605px);
+  font-size: 49.93px;
+  font-weight: 500;
+}
+.estadsticasDelMes {
+  top: 313px;
+  font-size: 35.64px;
+}
+.horas1 {
+  height: 26.41%;
+  width: 37%;
+  top: 29.86%;
+  left: 21.62%;
+  font-weight: 500;
+}
+.div,
+.enElMes,
+.horas1 {
+  position: absolute;
+  display: inline-block;
+}
+.div {
+  height: 94.44%;
+  width: 9.5%;
+  top: 5.56%;
+  left: 6.05%;
+  font-size: 90.87px;
+  font-weight: 600;
+}
+.enElMes {
+  height: 20.85%;
+  width: 29.57%;
+  top: 54.15%;
+  left: 21.78%;
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.horasParent {
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 600px;
+  height: 142px;
+}
+.div1 {
+  position: absolute;
+  top: 37.5%;
+  left: 32.5%;
+  font-weight: 300;
+}
+.frameChild,
+.frameInner {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.frameChild {
+  width: 100%;
+  left: 0;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+}
+.frameInner {
+  width: 55%;
+  left: 45%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.parent {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: -105px;
+  font-size: var(--font-size-sm-5);
+  color: var(--color-dimgray-400);
+}
+.horas {
+  position: absolute;
+  top: 586px;
+  left: 110px;
+  width: 600px;
+  height: 144px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-11xs);
+  box-sizing: border-box;
+}
+.div2,
+.reemplazos {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 170.3px);
+  font-weight: 500;
+  display: inline-block;
+  width: 222px;
+}
+.div2 {
+  top: 5px;
+  left: calc(50% - 263.7px);
+  font-size: 90.87px;
+  font-weight: 600;
+  width: 61.2px;
+}
+.div3,
+.enElMes1 {
+  position: absolute;
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.enElMes1 {
+  top: 75px;
+  left: calc(50% - 169.3px);
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  width: 177.4px;
+}
+.div3 {
+  top: 61px;
+  left: calc(50% + 226px);
+  font-size: var(--font-size-sm-5);
+}
+.reemplazosParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 600px;
+  height: 142px;
+}
+.ellipseDiv {
+  position: absolute;
+  top: 31px;
+  left: 496px;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+}
+.ellipseIcon,
+.frameParent {
+  position: absolute;
+  top: 31px;
+  left: 532px;
+  width: 44px;
+  height: 80px;
+}
+.frameParent {
+  top: 420px;
+  left: 731px;
+  width: 600px;
+  height: 142px;
+}
+.div4,
+.div5,
+.noAplica,
+.s {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 479.2px);
+  font-weight: 300;
+  display: inline-block;
+  width: 177.4px;
+}
+.div5,
+.noAplica,
+.s {
+  left: calc(50% - 212.2px);
+}
+.noAplica,
+.s {
+  left: calc(50% + 49.8px);
+}
+.noAplica {
+  left: calc(50% + 301.8px);
+}
+.container,
+.frameDiv,
+.group,
+.parent1,
+.parent2 {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  width: 958.4px;
+  height: 24px;
+}
+.container,
+.frameDiv,
+.parent1,
+.parent2 {
+  top: 97px;
+}
+.frameDiv,
+.parent1,
+.parent2 {
+  top: 137px;
+}
+.parent1,
+.parent2 {
+  top: 176px;
+}
+.parent2 {
+  top: 217px;
+}
+.asisiti,
+.bloque,
+.fecha,
+.reemplazo {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 479.2px);
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.asisiti,
+.bloque,
+.reemplazo {
+  left: calc(50% - 209.2px);
+}
+.asisiti,
+.reemplazo {
+  left: calc(50% + 49.8px);
+}
+.reemplazo {
+  left: calc(50% + 301.8px);
+}
+.frameGroup {
+  position: absolute;
+  top: 88px;
+  left: 28px;
+  width: 958.4px;
+  height: 241px;
+}
+.historial1 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 566.5px);
+  font-size: 35.64px;
+  font-weight: 500;
+}
+.historialChild,
+.historialItem {
+  position: absolute;
+  top: 80px;
+  left: 3px;
+  width: 1078.5px;
+  height: 1px;
+}
+.historialItem {
+  top: 126px;
+}
+.historialInner,
+.rectangleDiv {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-gainsboro-100);
+  width: 12px;
+  height: 80px;
+}
+.historialInner {
+  position: absolute;
+  top: 145px;
+  left: 1121px;
+  background-color: var(--color-whitesmoke-300);
+  height: 321px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.historial {
+  position: absolute;
+  top: 822px;
+  left: 163px;
+  width: 1133px;
+  height: 466px;
+  font-size: var(--font-size-base);
+}
+.div14 {
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 253.7px);
+  font-size: 90.87px;
+  font-weight: 600;
+  display: inline-block;
+  width: 61.2px;
+}
+.frameContainer {
+  position: absolute;
+  top: 587px;
+  left: 731px;
+  width: 600px;
+  height: 142px;
+}
+.ciacChild {
+  position: relative;
+  width: 95px;
+  height: 42.5px;
+}
+.home {
+  position: relative;
+  font-weight: 500;
+}
+.ciac,
+.homeParent {
+  width: 284px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-30xl);
+}
+.ciac {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-darkslategray);
+  width: 1440px;
+  height: 97px;
+  align-items: flex-start;
+  padding: var(--padding-11xl) var(--padding-54xl) var(--padding-11xl)
+    var(--padding-101xl);
+  box-sizing: border-box;
+  gap: var(--gap-849xl);
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+}
+.frameParent2,
+.turnosGroup {
+  position: relative;
+  width: 600px;
+  height: 142px;
+}
+.turnosGroup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset, 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.frameParent3 {
+  position: relative;
+  width: 600px;
+  height: 142px;
+  margin-top: -142px;
+}
+.frameParent1 {
+  position: absolute;
+  top: 415px;
+  left: 110px;
+  width: 600px;
+  height: 142px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.vectorIcon {
+  position: relative;
+  width: 20px;
+  height: 11.8px;
+}
+.filtro {
+  position: absolute;
+  top: 201px;
+  left: 1052px;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-dimgray-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) var(--padding-8xl);
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-xl);
+  color: var(--color-dimgray-100);
+}
+.bloque1,
+.fechaDeTurno {
+  position: absolute;
+  height: 7.51%;
+  width: 28.77%;
+  top: 27.81%;
+  left: 6.08%;
+  display: inline-block;
+}
+.bloque1 {
+  width: 12.77%;
+  left: 29.28%;
+}
+.p {
+  margin-block-start: 0;
+  margin-block-end: 20px;
+}
+.blankLine1 {
+  margin: 0;
+}
+.div20,
+.div21 {
+  position: absolute;
+  width: 15.4%;
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  display: inline-block;
+}
+.div20 {
+  height: 45.47%;
+  top: 39.07%;
+  left: 8.81%;
+  text-align: center;
+}
+.div21 {
+  height: 45.92%;
+  top: 38.63%;
+  left: 32.02%;
+}
+.lineIcon {
+  position: absolute;
+  height: 0.86%;
+  width: 38.3%;
+  top: 36.64%;
+  right: 56.33%;
+  bottom: 62.49%;
+  left: 5.37%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.lineDiv {
+  position: absolute;
+  height: 0.22%;
+  width: 92.71%;
+  top: 19.98%;
+  right: 3.7%;
+  bottom: 79.8%;
+  left: 3.6%;
+  border-top: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+}
+.div22,
+.groupIcon {
+  position: relative;
+  width: 269.5px;
+  height: 263.4px;
+}
+.div22 {
+  font-weight: 300;
+  display: inline-block;
+  width: 106px;
+  height: 51px;
+  flex-shrink: 0;
+  margin-left: -161px;
+}
+.groupParent {
+  position: absolute;
+  top: 135px;
+  left: 582px;
+  width: 265px;
+  height: 253px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: var(--font-size-21xl);
+  color: var(--color-gray-100);
+}
+.turnosAsistidosDe {
+  position: absolute;
+  height: 15.45%;
+  width: 58.66%;
+  top: 7.95%;
+  left: 5.37%;
+  font-size: var(--font-size-17xl);
+  font-weight: 500;
+  display: inline-block;
+}
+.fechaDeTurnoParent {
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-400);
+  width: 987px;
+  height: 453px;
+}
+.tablaDeAsistencia {
+  position: absolute;
+  top: calc(50% - 592px);
+  left: calc(50% - 719px);
+  background-color: var(--color-gray-200);
+  width: 1439px;
+  height: 1219px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 366px 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-5xl);
+}
+.vectorIcon1,
+.vectorIcon2 {
+  position: absolute;
+  height: 36.67%;
+  width: 36.67%;
+  top: 31.67%;
+  right: 31.67%;
+  bottom: 31.67%;
+  left: 31.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorIcon2 {
+  height: 103.33%;
+  width: 103.33%;
+  top: -1.67%;
+  right: -1.67%;
+  bottom: -1.67%;
+  left: -1.67%;
+}
+.out {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  height: 2.53%;
+  width: 2.08%;
+  top: 33.95%;
+  right: 18.26%;
+  bottom: 63.51%;
+  left: 79.65%;
+}
+.ventanaTurnos {
+  position: relative;
+  background-color: var(--color-whitesmoke-200);
+  width: 100%;
+  height: 1184px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
