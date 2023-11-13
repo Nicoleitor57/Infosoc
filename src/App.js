@@ -10,12 +10,6 @@ import TutorLoginPage from './TutorLoginPage';
 import Login from './Login';
 
 import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
 import VentanaTurnos from "./pages/VentanaTurnos";
 import VentanaDeAusencias from "./pages/VentanaDeAusencias";
 import VentanaDeHoras from "./pages/VentanaDeHoras";
