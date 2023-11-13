@@ -9,7 +9,70 @@ import RoleSelectionPage from './RoleSelectionPage';
 import TutorLoginPage from './TutorLoginPage';
 import Login from './Login';
 
+import { useEffect } from "react";
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
+import VentanaTurnos from "./pages/VentanaTurnos";
+import VentanaDeAusencias from "./pages/VentanaDeAusencias";
+import VentanaDeHoras from "./pages/VentanaDeHoras";
+import VentanaDeReemplazos from "./pages/VentanaDeReemplazos";
+import VistaTutor from "./pages/VistaTutor";
+
 function App() {
+  const action = useNavigationType();
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    if (action !== "POP") {
+      window.scrollTo(0, 0);
+    }
+  }, [action, pathname]);
+
+  useEffect(() => {
+    let title = "";
+    let metaDescription = "";
+
+    switch (pathname) {
+      case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/ventana-de-ausencias":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/ventana-de-horas":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/ventana-de-reemplazos":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/vista-tutor":
+        title = "";
+        metaDescription = "";
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag = document.querySelector(
+        'head > meta[name="description"]'
+      );
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
   return (
     <Router>
       <div className="app">
@@ -22,6 +85,11 @@ function App() {
           <Route path="/Admin" element={<Admin />} />
           <Route path="/Horario" element={<Horario />} />
           <Route path="/Coordinador" element={<Coordinador />} />
+          <Route path="/" element={<VentanaTurnos />} />
+          <Route path="/ventana-de-ausencias" element={<VentanaDeAusencias />} />
+          <Route path="/ventana-de-horas" element={<VentanaDeHoras />} />
+          <Route path="/ventana-de-reemplazos" element={<VentanaDeReemplazos />} />
+          <Route path="/vista-tutor" element={<VistaTutor />} />
         </Routes>
       </div>
     </Router>
