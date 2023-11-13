@@ -1,0 +1,83 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    /*opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease-in-out; /* Añadimos transición para opacity y transform */
+    opacity: 0;
+    animation-duration: 0.5s; /* Duración de la animación */
+    animation-fill-mode: forwards; 
+    
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.overlay.show, .modal.show {
+    animation-name: fadeIn; /* Aplicar fadeIn cuando la clase show está presente */
+  }
+  
+  .overlay.hide, .modal.hide {
+    animation-name: fadeOut; /* Aplicar fadeOut cuando la clase hide está presente */
+  }
+.overlay {
+    background: rgba(49,49,49,0.8);
+    z-index: 2; /* Asegúrate de que tenga un valor mayor que el z-index de otros elementos */
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 8px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+.editable-div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 50px;
+    color: gray; /* Color predeterminado del texto */
+    transition: color 0.5s; /* Agrega una transición para el color */
+}
+
+.editable-div.editing {
+    color: black; /* Cambia el color cuando el div está en modo de edición */
+}

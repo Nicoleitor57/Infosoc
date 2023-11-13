@@ -16,7 +16,7 @@ function Modal(Modalprops) {
         </button>
       </div>
       <div className={s.box}>
-        <text>Lee el código QR del tutor/a</text>
+        <text className={s.subtitle}>Lee el código QR del tutor/a</text>
         <div className={s.codigoQR}>
           <img src="/codigoQR (1).png" alt="Imagen de un código QR" className={s.image}/>
           <input className={s.input}/>

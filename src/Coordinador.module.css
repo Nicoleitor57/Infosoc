@@ -1,3 +1,21 @@
 .wrapper {
   padding: 80px 120px;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.button {
+  background-color: #37343B;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 18px 32px;
+  width: 200px;
+}

@@ -16,17 +16,23 @@ function Admin() {
 
   const [ModalR, setModal] = useState(false);
   const [textoEditable, setTextoEditable] = useState("Ingresa tu texto aquí...");
-
+  const [accessError , setAccessError] = useState(false);
   //axios.get('http://localhost:9000/api/tutores') 
+
+  const confirmarError = () => {
+    //consulta api si tutor pertenece al bloque
+    const res = false
+    if (!res){
+      setAccessError(true);
+    }
+    else{setAccessError(false);setMostrarModal(false)} 
+  };
 
   const changeModal = () => {
     setModal(!ModalR);
   };
 
-  const abrirModal = (onUpdateTutores) => {
-    //logica para recuperar el id de un tutor que se igresa -> consultar base de datos.
-    onUpdateTutores(id, 1);
-
+  const abrirModal = () => {
     setMostrarModal(true);
   };
 
@@ -120,8 +126,13 @@ function Admin() {
               <input className={s.input}/>
             </div>
             <div className={s.buttons}>
-              <button className={s.button}>Ingresar</button>
+              <button className={s.button} onClick={confirmarError}>Ingresar</button>
               <button className={s.button2}>Ingresar de forma manual</button>
+              {accessError && (
+                <div className={s.error}>
+                  No existe este tutor en nuestra base de datos.
+                </div>
+              )}
             </div>
           </div>
         </section>
