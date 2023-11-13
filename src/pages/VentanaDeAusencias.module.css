@@ -1,0 +1,624 @@
+.holaSkelia {
+  top: 192px;
+  left: calc(50% - 605px);
+  font-size: 49.93px;
+}
+.div,
+.estadsticasDelMes,
+.holaSkelia,
+.turnos {
+  position: absolute;
+  font-weight: 500;
+}
+.estadsticasDelMes {
+  top: 313px;
+  left: calc(50% - 605px);
+  font-size: 35.64px;
+}
+.div,
+.turnos {
+  top: 40px;
+  left: calc(50% - 170.3px);
+  display: inline-block;
+  width: 222px;
+}
+.div {
+  top: 5px;
+  left: calc(50% - 263.7px);
+  font-size: 90.87px;
+  font-weight: 600;
+  width: 61.2px;
+}
+.div1,
+.enElMes {
+  position: absolute;
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.enElMes {
+  top: 75px;
+  left: calc(50% - 169.3px);
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  width: 177.4px;
+}
+.div1 {
+  top: 61px;
+  left: calc(50% + 226px);
+  font-size: var(--font-size-sm-5);
+}
+.turnosParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 600px;
+  height: 142px;
+}
+.frameChild,
+.frameItem {
+  position: absolute;
+  top: 31px;
+  height: 80px;
+}
+.frameChild {
+  left: 496px;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+  width: 80px;
+}
+.frameItem {
+  left: 532px;
+  width: 44px;
+}
+.frameGroup,
+.frameParent {
+  position: absolute;
+  top: 420px;
+  left: 109px;
+  width: 600px;
+  height: 142px;
+}
+.frameGroup {
+  left: 731px;
+}
+.div4,
+.div5,
+.noAplica,
+.s {
+  position: absolute;
+  top: 181px;
+  left: calc(50% - 525.5px);
+  font-weight: 300;
+  display: inline-block;
+  width: 177.4px;
+}
+.div5,
+.noAplica,
+.s {
+  left: calc(50% - 258.5px);
+}
+.noAplica,
+.s {
+  left: calc(50% + 3.5px);
+}
+.noAplica {
+  left: calc(50% + 255.5px);
+}
+.div6,
+.div7,
+.parent {
+  position: absolute;
+  top: 0;
+}
+.parent {
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 1229px;
+  height: 502px;
+}
+.div6,
+.div7 {
+  left: calc(50% - 479.2px);
+  font-weight: 300;
+  display: inline-block;
+  width: 177.4px;
+}
+.div7 {
+  left: calc(50% - 212.2px);
+}
+.container,
+.group {
+  position: absolute;
+  top: 221px;
+  left: 89px;
+  width: 958.4px;
+  height: 24px;
+}
+.container {
+  top: 261px;
+}
+.no,
+.sofaRos {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 49.8px);
+  font-weight: 300;
+  display: inline-block;
+  width: 177.4px;
+}
+.sofaRos {
+  left: calc(50% + 301.8px);
+}
+.frameDiv,
+.parent1 {
+  position: absolute;
+  top: 300px;
+  left: 89px;
+  width: 958.4px;
+  height: 24px;
+}
+.parent1 {
+  top: 341px;
+}
+.asisiti,
+.bloque,
+.fecha,
+.reemplazo {
+  position: absolute;
+  top: 124px;
+  left: calc(50% - 525.5px);
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.asisiti,
+.bloque,
+.reemplazo {
+  left: calc(50% - 255.5px);
+}
+.asisiti,
+.reemplazo {
+  left: calc(50% + 3.5px);
+}
+.reemplazo {
+  left: calc(50% + 255.5px);
+}
+.frameContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1229px;
+  height: 502px;
+}
+.historial1 {
+  position: absolute;
+  top: 36px;
+  left: calc(50% - 553.5px);
+  font-size: 35.64px;
+  font-weight: 500;
+}
+.historialChild,
+.historialItem {
+  position: absolute;
+  top: 116px;
+  left: 64px;
+  width: 1078.5px;
+  height: 1px;
+}
+.historialItem {
+  top: 162px;
+}
+.historialInner,
+.rectangleDiv {
+  position: relative;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-gainsboro-100);
+  width: 12px;
+  height: 80px;
+}
+.historialInner {
+  position: absolute;
+  top: 181px;
+  left: 1182px;
+  background-color: var(--color-whitesmoke-300);
+  height: 321px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.historial {
+  position: absolute;
+  top: 786px;
+  left: 102px;
+  width: 1229px;
+  height: 502px;
+  font-size: var(--font-size-base);
+}
+.horas1 {
+  height: 26.41%;
+  width: 37%;
+  top: 29.86%;
+  left: 21.62%;
+  font-weight: 500;
+}
+.div14,
+.enElMes2,
+.horas1 {
+  position: absolute;
+  display: inline-block;
+}
+.div14 {
+  height: 94.44%;
+  width: 9.5%;
+  top: 5.56%;
+  left: 6.05%;
+  font-size: 90.87px;
+  font-weight: 600;
+}
+.enElMes2 {
+  height: 20.85%;
+  width: 29.57%;
+  top: 54.15%;
+  left: 21.78%;
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.horasParent {
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 600px;
+  height: 142px;
+}
+.div15 {
+  position: absolute;
+  top: 37.5%;
+  left: 32.5%;
+  font-weight: 300;
+}
+.ellipseDiv,
+.frameChild2 {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.ellipseDiv {
+  width: 100%;
+  left: 0;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+}
+.frameChild2 {
+  width: 55%;
+  left: 45%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.parent2 {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: -105px;
+  font-size: var(--font-size-sm-5);
+  color: var(--color-dimgray-400);
+}
+.div16,
+.horas {
+  position: absolute;
+}
+.horas {
+  top: 583px;
+  left: 109px;
+  width: 600px;
+  height: 144px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-11xs);
+  box-sizing: border-box;
+}
+.div16 {
+  top: 5px;
+  left: calc(50% - 253.7px);
+  font-size: 90.87px;
+  font-weight: 600;
+  display: inline-block;
+  width: 61.2px;
+}
+.frameParent1 {
+  position: relative;
+  width: 600px;
+  height: 142px;
+}
+.ausencias {
+  position: absolute;
+  top: 587px;
+  left: 731px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ciacChild {
+  position: relative;
+  width: 95px;
+  height: 42.5px;
+}
+.home {
+  position: relative;
+  font-weight: 500;
+}
+.ciac,
+.homeParent {
+  width: 284px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-30xl);
+}
+.ciac {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-darkslategray);
+  width: 1440px;
+  height: 97px;
+  align-items: flex-start;
+  padding: var(--padding-11xl) var(--padding-54xl) var(--padding-11xl)
+    var(--padding-101xl);
+  box-sizing: border-box;
+  gap: var(--gap-849xl);
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+}
+.vectorIcon {
+  position: relative;
+  width: 20px;
+  height: 11.8px;
+}
+.filtro {
+  position: absolute;
+  top: 207px;
+  left: 1102px;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-dimgray-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) var(--padding-8xl);
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-xl);
+  color: var(--color-dimgray-100);
+}
+.bloque1,
+.fecha1,
+.razn,
+.reemplazo1 {
+  position: absolute;
+  top: 0;
+  left: 452px;
+  display: inline-block;
+  width: 147px;
+  height: 37px;
+}
+.bloque1,
+.fecha1,
+.razn {
+  left: 295.1px;
+  width: 88.9px;
+}
+.bloque1,
+.fecha1 {
+  left: 133.3px;
+}
+.fecha1 {
+  left: 13px;
+}
+.no2 {
+  margin: 0;
+}
+.sofaRosSofaContainer {
+  position: absolute;
+  top: 50px;
+  left: calc(50% + 177.2px);
+  font-size: var(--font-size-base);
+  font-weight: 300;
+  display: inline-block;
+  width: 110.1px;
+}
+.certificadoMdico {
+  margin-block-start: 0;
+  margin-block-end: 20px;
+}
+.certificadoMdicoTopeContainer,
+.div18,
+.div19 {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 45px);
+  font-size: var(--font-size-base);
+  font-weight: 300;
+  display: inline-block;
+  width: 186.2px;
+}
+.div18,
+.div19 {
+  left: calc(50% - 145.5px);
+  width: 48.7px;
+}
+.div19 {
+  left: calc(50% - 296.8px);
+  width: 109px;
+}
+.tablaChild {
+  position: absolute;
+  top: 36.5px;
+  left: -0.5px;
+  border-top: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  width: 601px;
+  height: 1px;
+}
+.tablaItem {
+  position: absolute;
+  left: 111.7px;
+}
+.lineDiv,
+.tablaInner,
+.tablaItem {
+  top: 36.5px;
+  border-right: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  width: 1px;
+  height: 201px;
+}
+.tablaInner {
+  position: absolute;
+  left: 233.4px;
+}
+.lineDiv {
+  left: 431.2px;
+}
+.div20,
+.lineDiv,
+.tabla {
+  position: absolute;
+}
+.tabla {
+  top: 134px;
+  left: 68px;
+  width: 600px;
+  height: 237px;
+}
+.div20 {
+  top: calc(50% - 29px);
+  left: calc(50% - 42px);
+  font-weight: 300;
+  display: inline-block;
+  width: 84px;
+  height: 58px;
+}
+.graficoChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+  width: 230px;
+  height: 230px;
+}
+.grafico,
+.graficoItem {
+  position: absolute;
+  top: -4.5px;
+  left: 104px;
+  width: 134.2px;
+  height: 239.9px;
+}
+.grafico {
+  top: 138px;
+  left: 736px;
+  width: 230px;
+  height: 230px;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+  color: var(--color-dimgray-400);
+}
+.turnosAusentadosDe {
+  position: absolute;
+  top: 38px;
+  left: 50px;
+  font-size: var(--font-size-17xl);
+  font-weight: 500;
+  display: inline-block;
+  width: 579px;
+  height: 70px;
+}
+.frameChild5 {
+  position: absolute;
+  top: 95px;
+  left: 37.5px;
+  border-top: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  width: 984px;
+  height: 1px;
+}
+.tablaParent {
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-400);
+  width: 1051px;
+  height: 439px;
+}
+.tablaDeAusencias {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-gray-200);
+  width: 1440px;
+  height: 1184px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-5xl);
+}
+.vectorIcon1,
+.vectorIcon2 {
+  position: absolute;
+  height: 36.67%;
+  width: 36.67%;
+  top: 31.67%;
+  right: 31.67%;
+  bottom: 31.67%;
+  left: 31.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorIcon2 {
+  height: 103.33%;
+  width: 103.33%;
+  top: -1.67%;
+  right: -1.67%;
+  bottom: -1.67%;
+  left: -1.67%;
+}
+.out {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 410px;
+  left: 1185px;
+  width: 30px;
+  height: 30px;
+}
+.ventanaDeAusencias {
+  position: relative;
+  background-color: var(--color-whitesmoke-200);
+  width: 100%;
+  height: 1184px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}

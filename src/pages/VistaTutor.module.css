@@ -1,0 +1,504 @@
+.estadsticasDelMes,
+.holaSkelia {
+  position: absolute;
+  top: 192px;
+  left: calc(50% - 605px);
+  font-size: 49.93px;
+  font-weight: 500;
+}
+.estadsticasDelMes {
+  top: 313px;
+  font-size: 35.64px;
+}
+.ciacChild {
+  position: relative;
+  width: 95px;
+  height: 42.5px;
+}
+.home {
+  position: relative;
+  font-weight: 500;
+}
+.homeParent {
+  width: 284px;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-30xl);
+}
+.ciac,
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ciac {
+  background-color: var(--color-darkslategray);
+  width: 1440px;
+  height: 97px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xl) var(--padding-54xl) var(--padding-11xl)
+    var(--padding-101xl);
+  box-sizing: border-box;
+  gap: var(--gap-849xl);
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+}
+.groupChild {
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 600px;
+  height: 142px;
+}
+.div,
+.turnos1 {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 170.3px);
+  font-weight: 500;
+  display: inline-block;
+  width: 222px;
+}
+.div {
+  top: 5px;
+  left: calc(50% - 263.7px);
+  font-size: 90.87px;
+  font-weight: 600;
+  width: 61.2px;
+}
+.div1,
+.enElMes {
+  position: absolute;
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.enElMes {
+  top: 75px;
+  left: calc(50% - 169.3px);
+  font-size: var(--font-size-xl);
+  display: inline-block;
+  width: 177.4px;
+}
+.div1 {
+  top: 61px;
+  left: calc(50% + 226px);
+  font-size: var(--font-size-sm-5);
+}
+.groupInner,
+.groupItem {
+  position: absolute;
+  top: 31px;
+  height: 80px;
+}
+.groupItem {
+  left: 496px;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+  width: 80px;
+}
+.groupInner {
+  left: 532px;
+  width: 44px;
+}
+.turnos,
+.turnosInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 142px;
+}
+.turnos {
+  cursor: pointer;
+  text-decoration: none;
+  top: 419px;
+  left: 109px;
+  color: inherit;
+}
+.rectangleDiv {
+  position: absolute;
+  height: 98.61%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 1.39%;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+}
+.horas1 {
+  width: 37%;
+  top: 29.86%;
+  left: 21.62%;
+  font-weight: 500;
+  display: inline-block;
+}
+.div2,
+.enElMes1,
+.horas1 {
+  position: absolute;
+}
+.div2 {
+  top: 5.56%;
+  left: 6.05%;
+  font-size: 90.87px;
+  font-weight: 600;
+}
+.enElMes1 {
+  width: 29.57%;
+  top: 54.17%;
+  left: 21.78%;
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+  display: inline-block;
+}
+.rectangleGroup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.div3 {
+  position: absolute;
+  top: 37.5%;
+  left: 32.5%;
+  font-weight: 300;
+}
+.ellipseDiv,
+.ellipseIcon {
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.ellipseDiv {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+}
+.ellipseIcon {
+  width: 55%;
+  left: 45%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.ellipseIcon,
+.horas,
+.parent {
+  position: absolute;
+}
+.parent {
+  height: 55.56%;
+  width: 13.33%;
+  top: 22.22%;
+  right: 4.17%;
+  bottom: 22.22%;
+  left: 82.5%;
+  font-size: var(--font-size-sm-5);
+  color: var(--color-dimgray-400);
+}
+.horas {
+  cursor: pointer;
+  text-decoration: none;
+  top: 587px;
+  left: 109px;
+  width: 600px;
+  height: 144px;
+  color: inherit;
+}
+.groupChild2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+}
+.div4,
+.reemplazos1 {
+  position: absolute;
+  width: 37%;
+  top: 28.17%;
+  left: 21.62%;
+  font-weight: 500;
+  display: inline-block;
+}
+.div4 {
+  width: 10.2%;
+  top: 3.52%;
+  left: 6.05%;
+  font-size: 90.87px;
+  font-weight: 600;
+}
+.div5,
+.enElMes2 {
+  position: absolute;
+  font-weight: 300;
+  color: var(--color-dimgray-400);
+}
+.enElMes2 {
+  width: 29.57%;
+  top: 52.82%;
+  left: 21.78%;
+  font-size: var(--font-size-xl);
+  display: inline-block;
+}
+.div5 {
+  top: 42.96%;
+  left: 87.67%;
+  font-size: var(--font-size-sm-5);
+}
+.groupChild3,
+.groupChild4 {
+  position: absolute;
+  height: 56.34%;
+  top: 21.83%;
+  right: 4%;
+  bottom: 21.83%;
+}
+.groupChild3 {
+  width: 13.33%;
+  left: 82.67%;
+  border-radius: 50%;
+  border: 10px solid var(--color-lightgray);
+  box-sizing: border-box;
+}
+.groupChild4 {
+  width: 7.33%;
+  left: 88.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.reemplazos {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 419px;
+  left: 731px;
+  width: 600px;
+  height: 142px;
+  color: inherit;
+}
+.div6 {
+  position: absolute;
+  width: 10.2%;
+  top: 3.52%;
+  left: 7.72%;
+  font-size: 90.87px;
+  font-weight: 600;
+  display: inline-block;
+}
+.ausencias {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 587px;
+  left: 731px;
+  width: 600px;
+  height: 142px;
+  color: inherit;
+}
+.filtroPorMes {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-dimgray-100);
+  text-align: left;
+}
+.vectorIcon {
+  position: relative;
+  width: 20px;
+  height: 11.8px;
+}
+.filtro,
+.frameChild {
+  border-radius: var(--br-11xl);
+}
+.filtro {
+  cursor: pointer;
+  border: 1px solid var(--color-dimgray-200);
+  padding: var(--padding-6xs) var(--padding-8xl);
+  background-color: var(--color-whitesmoke-100);
+  position: absolute;
+  top: 201px;
+  left: 1052px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.frameChild {
+  position: relative;
+  background-color: var(--color-gainsboro-100);
+  width: 12px;
+  height: 80px;
+}
+.frame,
+.frameInner {
+  width: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.frameInner {
+  border-radius: var(--br-11xl);
+  background-color: var(--color-whitesmoke-300);
+  height: 321px;
+  justify-content: flex-start;
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: 1182px;
+  height: 502px;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+.asisiti,
+.bloque,
+.fecha,
+.reemplazo {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 446px);
+  font-weight: 300;
+}
+.asisiti,
+.bloque,
+.reemplazo {
+  left: calc(50% - 176px);
+}
+.asisiti,
+.reemplazo {
+  left: calc(50% + 83px);
+}
+.reemplazo {
+  left: calc(50% + 335px);
+}
+.frame1 {
+  position: relative;
+  width: 892px;
+  height: 30px;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-size: var(--font-size-xl);
+  color: var(--color-dimgray-400);
+}
+.div8,
+.div9,
+.noAplica,
+.s {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 479.2px);
+  font-weight: 300;
+  display: inline-block;
+  width: 177.4px;
+}
+.div9,
+.noAplica,
+.s {
+  left: calc(50% - 212.2px);
+}
+.noAplica,
+.s {
+  left: calc(50% + 49.8px);
+}
+.noAplica {
+  left: calc(50% + 301.8px);
+}
+.group {
+  position: relative;
+  width: 958.4px;
+  height: 24px;
+}
+.frame2,
+.frame3,
+.frameParent {
+  display: flex;
+  flex-direction: column;
+}
+.frameParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 1229px;
+  height: 502px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-105xl) var(--padding-70xl);
+  box-sizing: border-box;
+  gap: var(--gap-base);
+}
+.frame2,
+.frame3 {
+  width: 147px;
+  overflow: hidden;
+  align-items: center;
+}
+.frame3 {
+  height: 466px;
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+.frame2 {
+  position: absolute;
+  top: 0;
+  left: 61px;
+  height: 502px;
+  justify-content: flex-end;
+  font-size: 35.64px;
+}
+.historial,
+.historialChild,
+.historialItem {
+  position: absolute;
+  top: 116px;
+  left: 64px;
+  width: 1078.5px;
+  height: 1px;
+}
+.historial,
+.historialItem {
+  top: 162px;
+}
+.historial {
+  top: 786px;
+  left: 102px;
+  width: 1229px;
+  height: 502px;
+  font-size: var(--font-size-base);
+}
+.vistaTutor {
+  position: relative;
+  background-color: var(--color-whitesmoke-200);
+  width: 100%;
+  height: 1184px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
