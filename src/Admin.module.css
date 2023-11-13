@@ -122,4 +122,11 @@
   padding: 24px;
 }
 
-
+.error {
+  background-color: #FED0D0;
+  border: solid 1px #C23636;
+  border-radius: 8px;
+  color: #C23636;
+  margin-bottom: 24px;
+  padding: 24px;
+}
