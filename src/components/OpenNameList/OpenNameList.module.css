@@ -1,25 +1,16 @@
-.open {
+.info {
+  background-color: #F7F7F7;
+  border-radius: 0px 0px 10px 10px;
   display: flex;
   flex-direction: column;
-  gap: 0px;
-}
-
-.list {
-  background-color: #F7F7F7;
-  border-radius: 10px;
-  display: flex;
   justify-content: space-between;
   padding: 16px 24px;
   width: 800px;
 }
 
-.listAbierta {
-  background-color: #F7F7F7;
-  border-radius: 10px 10px 0px 0px;
+.name {
   display: flex;
   justify-content: space-between;
-  padding: 16px 24px;
-  width: 800px;
 }
 
 .rotulo {
@@ -29,7 +20,7 @@
 
 .type {
   color: #5D5D5D;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .icon {
@@ -37,6 +28,14 @@
   border: none;
 }
 
-.name {
-  font-size: 18px;
+.textbold {
+  color: #1E1E1E;
+  font-weight: 500;
+}
+
+.text {
+  color: #1E1E1E;
+  display: flex;
+  font-size: 16px;
+  gap: 4px;
 }

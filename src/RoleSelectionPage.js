@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import frame_2 from './images/Frame_2.png';
 import './css_files/text.css';
 import ciacpng from './images/Ciac.png';
+import frame_2 from './images/Frame_2.png';
 
 function RoleSelectionPage() {
 

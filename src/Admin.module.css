@@ -33,14 +33,23 @@
 }
 
 .modal {
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
+  background-color: white;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 2;
 }
 
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
 
 
 

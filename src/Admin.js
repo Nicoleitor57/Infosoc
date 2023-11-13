@@ -11,13 +11,17 @@ const Arreglo = [{"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor
 
 function Admin() {
   const [mostrarModal, setMostrarModal] = useState(false);
+  const [mostrarFondoOscuro, setMostrarFondoOscuro] = useState(false);
+
 
   const abrirModal = () => {
     setMostrarModal(true);
+    setMostrarFondoOscuro(true);
   };
 
   const cerrarModal = () => {
     setMostrarModal(false);
+    setMostrarFondoOscuro(false);
   };
 
   return(
@@ -39,7 +43,8 @@ function Admin() {
       </div>
       <div>
     </div>
-    <Modal show={mostrarModal} cerrarModal={cerrarModal} className={s.modal}/>
+    {mostrarFondoOscuro && <div className={s.overlay} onClick={cerrarModal}></div>}
+    <Modal show={mostrarModal} cerrarModal={cerrarModal} className={s.modal} />
     </article>
     </>
   );
