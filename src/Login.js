@@ -27,7 +27,7 @@ function Login({ role }) {
         navigate('/Admin'); // redirect a Admin
         break;
       case 'Tutor':
-        navigate('/LoggedInPage'); // 
+        navigate('/vista-tutor'); // 
         break;
       case 'Coordinador':
         navigate('/LoggedInPage'); // 

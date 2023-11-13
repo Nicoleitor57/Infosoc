@@ -5,68 +5,67 @@ import AdminLoginPage from './AdminLoginPage';
 import Coordinador from './Coordinador';
 import CoordinadorLoginPage from './CoordinadorLoginPage';
 import Horario from './Horario';
+import Login from './Login';
 import RoleSelectionPage from './RoleSelectionPage';
 import TutorLoginPage from './TutorLoginPage';
-import Login from './Login';
 
-import { useEffect } from "react";
-import VentanaTurnos from "./pages/VentanaTurnos";
 import VentanaDeAusencias from "./pages/VentanaDeAusencias";
 import VentanaDeHoras from "./pages/VentanaDeHoras";
 import VentanaDeReemplazos from "./pages/VentanaDeReemplazos";
+import VentanaTurnos from "./pages/VentanaTurnos";
 import VistaTutor from "./pages/VistaTutor";
 
 function App() {
-  const action = useNavigationType();
-  const location = useLocation();
-  const pathname = location.pathname;
+  // const action = useNavigationType();
+  // const location = useLocation();
+  // const pathname = location.pathname;
 
-  useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
+  // useEffect(() => {
+  //   if (action !== "POP") {
+  //     window.scrollTo(0, 0);
+  //   }
+  // }, [action, pathname]);
 
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
+  // useEffect(() => {
+  //   let title = "";
+  //   let metaDescription = "";
 
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/ventana-de-ausencias":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/ventana-de-horas":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/ventana-de-reemplazos":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/vista-tutor":
-        title = "";
-        metaDescription = "";
-        break;
-    }
+  //   switch (pathname) {
+  //     case "/":
+  //       title = "";
+  //       metaDescription = "";
+  //       break;
+  //     case "/ventana-de-ausencias":
+  //       title = "";
+  //       metaDescription = "";
+  //       break;
+  //     case "/ventana-de-horas":
+  //       title = "";
+  //       metaDescription = "";
+  //       break;
+  //     case "/ventana-de-reemplazos":
+  //       title = "";
+  //       metaDescription = "";
+  //       break;
+  //     case "/vista-tutor":
+  //       title = "";
+  //       metaDescription = "";
+  //       break;
+  //   }
 
-    if (title) {
-      document.title = title;
-    }
+  //   if (title) {
+  //     document.title = title;
+  //   }
 
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
+  //   if (metaDescription) {
+  //     const metaDescriptionTag = document.querySelector(
+  //       'head > meta[name="description"]'
+  //     );
+  //     if (metaDescriptionTag) {
+  //       metaDescriptionTag.content = metaDescription;
+  //     }
+  //   }
+  // }, [pathname]);
   return (
     <Router>
       <div className="app">
