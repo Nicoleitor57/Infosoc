@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import s from './Admin.module.css';
 import './ModalReemp.css';
 import Header from "./components/Header/Header";
 import InfoBloque from "./components/InfoBloque/InfoBloque";
 import Turno from "./components/Turno/Turno";
 import './styles.css';
+import axios from 'axios';
 
 // const Arreglo = [{"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor" : "Tutor/a de Mat/Fis"}, {"nombre":"Sofia Rios", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis"}];
 
@@ -12,12 +13,10 @@ import './styles.css';
 function Admin() {
   const [editing] = useState(false);
   const [mostrarModal, setMostrarModal] = useState(false);
-  const [data] = useState([]);
-
   const [ModalR, setModal] = useState(false);
   const [textoEditable, setTextoEditable] = useState("Ingresa tu texto aquí...");
   const [accessError , setAccessError] = useState(false);
-  //axios.get('http://localhost:9000/api/tutores') 
+  //data axios.get('http://localhost:9000/api/tutores') 
 
   const confirmarError = () => {
     //consulta api si tutor pertenece al bloque
@@ -46,19 +45,33 @@ function Admin() {
     e.stopPropagation();
   };
 
-  const desplegarTutores = ({data}) => {
-    const [states, setStates] = useState([]);
+  const DesplegarTutores = () => {
+    const [data, setData] = useState([]);
+    // Realiza una solicitud GET a la API
+    axios.get('http://localhost:9000/api/tutores')
+    .then(response => {
+      const apiData = response.data;
+      console.log('Data de la API:', apiData); // Muestra la data en la consola
+      setData(apiData); // Almacena los datos en el estado del componente
+    })
+    .catch(error => {
+      console.error('Error al obtener datos de la API', error);
+    });
+
+
+
+    const [states, SetState] = useState([]);
     
   
     useEffect(() => {
   
       const initialStates = data.map(()=>0);
-      setStates(initialStates);
+      SetState(initialStates);
   
     },[data]);
   
     const updateStates = (idTutor, newState) => {
-      setStates((previousStates) => {
+      SetState((previousStates) => {
         const index = data.findIndex((item)=> item.id === idTutor);
         const newStates = [...previousStates];
   
@@ -98,11 +111,11 @@ function Admin() {
       <h1>Turnos actuales</h1>
       <div className={s.box}>
         <div className={s.turnos}>
-        {desplegarTutores(data)}
+        {DesplegarTutores()}
         </div>
         <div className={s.block}>
           <InfoBloque name="Axel Kaempffer" bloque="3-4"/>
-          <button className={s.button3} onClick={abrirModal(updateStates)}>Ingresar turno</button>
+          <button className={s.button3} onClick={abrirModal}>Ingresar turno</button>
           <button className={s.button3} onClick={changeModal}>Ingresar reemplazo</button>
         </div>
       </div>

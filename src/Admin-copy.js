@@ -74,18 +74,18 @@ function Admin() {
 
 
 const desplegarTutores = ({data}) => {
-  const [states, setStates] = useState([]);
+  const [states, SetState] = useState([]);
   
 
   useEffect(() => {
 
     const initialStates = data.map(()=>0);
-    setStates(initialStates);
+    SetState(initialStates);
 
   },[data]);
 
   const updateStates = (idTutor, newState) => {
-    setStates((previousStates) => {
+    SetState((previousStates) => {
       const index = data.findIndex((item)=> item.id === idTutor);
       const newStates = [...previousStates];
 
