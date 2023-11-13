@@ -1,9 +1,8 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import s from './Admin.module.css';
+import './ModalReemp.css';
 import Header from "./components/Header/Header";
 import InfoBloque from "./components/InfoBloque/InfoBloque";
-import Modal from "./components/Modal/Modal";
 import Turno from "./components/Turno/Turno";
 import './styles.css';
 
@@ -18,16 +17,11 @@ function Admin() {
   const [ModalR, setModal] = useState(false);
   const [textoEditable, setTextoEditable] = useState("Ingresa tu texto aquí...");
 
-
-  useEffect(() => {
-  // Realiza una solicitud GET a la API
-  axios.get('http://localhost:9000/api/tutores');
-
-
+  //axios.get('http://localhost:9000/api/tutores') 
 
   const changeModal = () => {
     setModal(!ModalR);
-  }
+  };
 
   const abrirModal = () => {
     setMostrarModal(true);
@@ -65,13 +59,39 @@ function Admin() {
         </div>
         <div className={s.block}>
           <InfoBloque name="Axel Kaempffer" bloque="3-4"/>
-          <button className={s.button} onClick={abrirModal}>Ingresar turno</button>
-          <button className={s.button} onClick={changeModal}>Ingresar reemplazo</button>
+          <button className={s.button3} onClick={abrirModal}>Ingresar turno</button>
+          <button className={s.button3} onClick={changeModal}>Ingresar reemplazo</button>
         </div>
       </div>
       <div>
     </div>
-    <Modal show={mostrarModal} cerrarModal={cerrarModal} className={s.modal}/>
+    {mostrarModal && (
+      <div className={`overlay ${mostrarModal ? 'show' : 'hide'}`}>
+        <div className={`modal ${mostrarModal ? 'show' : 'hide'}`}>
+          <div className='modal-content'>
+              <section className={s.modal}>
+                <div className={s.title}>
+            <h2>Ingresar turno</h2>
+            <button onClick={cerrarModal} className={s.icon}>
+              <img src="/close.svg" alt="Icono cerrar"/>
+            </button>
+          </div>
+          <div className={s.box2}>
+            <text className={s.subtitle}>Lee el código QR del tutor/a</text>
+            <div className={s.codigoQR}>
+              <img src="/codigoQR (1).png" alt="Imagen de un código QR" className={s.image}/>
+              <input className={s.input}/>
+            </div>
+            <div className={s.buttons}>
+              <button className={s.button}>Ingresar</button>
+              <button className={s.button2}>Ingresar de forma manual</button>
+            </div>
+          </div>
+        </section>
+          </div>
+       </div>
+      </div>
+    )}
     {ModalR && (
       <div className={`overlay ${ModalR ? 'show' : 'hide'}`} onClick={changeModal}>
       <div className={`modal ${ModalR ? 'show' : 'hide'}`}>
@@ -93,6 +113,6 @@ function Admin() {
     </article>
     </>
   );
-})}
+}
 
 export default Admin;

@@ -3,11 +3,6 @@
   position: relative;
 }
 
-.box {
-  display: flex;
-  gap: 32px;
-}
-
 .turnos {
   display: flex;
   flex-direction: column;
@@ -18,9 +13,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 324px;
 }
 
-.button {
+.button3 {
   background-color: #37343B;
   border: none;
   border-radius: 10px;
@@ -32,14 +28,6 @@
   width: 100%;
 }
 
-.modal {
-  background-color: white;
-  left: 50%;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%); 
-  z-index: 2;
-}
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -51,6 +39,87 @@
   z-index: 2;
 }
 
+.modal {
+  background-color: white;
+  border: solid 1px #C1C0C0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 480px;
+  justify-content: center;
+  left: 50%; 
+  padding: 32px 48px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; 
+  z-index: 2;
+}
 
+.subtitle {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+.codigoQR {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  border: solid 1px #C1C0C0;
+  border-radius: 8px;
+  height: 48px;
+  padding-left: 12px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  background-color: #37343B;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 18px 32px;
+}
+
+.button2 {
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  color: #37343B;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 18px 32px;
+  text-decoration: underline;
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  padding: 24px;
+}
 
 
