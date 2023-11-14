@@ -30,7 +30,7 @@ function Login({ role }) {
         navigate('/vista-tutor'); // 
         break;
       case 'Coordinador':
-        navigate('/LoggedInPage'); // 
+        navigate('/Coordinador'); // 
         break;
       default:
         console.log('Invalid role');

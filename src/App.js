@@ -72,13 +72,13 @@ function App() {
         <Routes>
           <Route path="/yourRoute/:URLvariable" element={<Login />} />
           <Route path="/" element={<RoleSelectionPage />} />
-          <Route path="/AdminLoginPage" element={<AdminLoginPage />} />
+          <Route path="/AdminLoginPage" element={<AdminLoginPage/>} />
           <Route path="/TutorLoginPage" element={<TutorLoginPage />} />
           <Route path="/CoordinadorLoginPage" element={<CoordinadorLoginPage />} />
           <Route path="/Admin" element={<Admin />} />
           <Route path="/Horario" element={<Horario />} />
           <Route path="/Coordinador" element={<Coordinador />} />
-          <Route path="/" element={<VentanaTurnos />} />
+          <Route path="/ventana-turnos" element={<VentanaTurnos />} />
           <Route path="/ventana-de-ausencias" element={<VentanaDeAusencias />} />
           <Route path="/ventana-de-horas" element={<VentanaDeHoras />} />
           <Route path="/ventana-de-reemplazos" element={<VentanaDeReemplazos />} />
