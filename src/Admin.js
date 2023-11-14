@@ -99,13 +99,13 @@ function Admin() {
                 <div className={s.title}>
             <h2>Ingresar turno</h2>
             <button onClick={cerrarModal} className={s.icon}>
-              <img src="/close.svg" alt="Icono cerrar"/>
+              <img src="images/close.svg" alt="Icono cerrar"/>
             </button>
           </div>
           <div className={s.box2}>
             <text className={s.subtitle}>Lee el código QR del tutor/a</text>
             <div className={s.codigoQR}>
-              <img src="/codigoQR.png" alt="Imagen de un código QR" className={s.image}/>
+              <img src="images/codigoQR.png" alt="Imagen de un código QR" className={s.image}/>
               <input type="text" name="id" value={id} onChange={recuperarId} className={s.input}/>
             </div>
             <div className={s.buttons}>
