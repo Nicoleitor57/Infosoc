@@ -6,7 +6,7 @@ import InfoBloque from "./components/InfoBloque/InfoBloque";
 import Turno from "./components/Turno/Turno";
 import './styles.css';
 
-// const Arreglo = [{"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor" : "Tutor/a de Mat/Fis"}, {"nombre":"Sofia Rios", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis"}];
+const Arreglo = [{"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor" : "Tutor/a de Mat/Fis"}, {"nombre":"Sofia Rios", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis"}];
 
 
 function Admin() {
@@ -70,9 +70,9 @@ function Admin() {
       <h1>Turnos actuales</h1>
       <div className={s.box}>
         <div className={s.turnos}>
-        {data.map((item) => (         
+        {Arreglo.map((item) => (         
           <Turno
-            name={item.name}
+            name={item.nombre}
             tipoTutor={item.tipoTutor}
             state={
               item.Estado === 0 ? 'Ausente' :
