@@ -13,38 +13,55 @@ function Admin() {
   const [editing] = useState(false);
   const [mostrarModal, setMostrarModal] = useState(false);
   const [data] = useState([]);
+  const [id, setId] = useState('');
+  const [accessError, setAccessError] = useState(false);
+  const [accessSuccess, setAccessSuccess] = useState(false);
 
   const [ModalR, setModal] = useState(false);
   const [textoEditable, setTextoEditable] = useState("Ingresa tu texto aquí...");
-  const [accessError , setAccessError] = useState(false);
   //axios.get('http://localhost:9000/api/tutores') 
-
-  const confirmarError = () => {
-    //consulta api si tutor pertenece al bloque
-    const res = false
-    if (!res){
-      setAccessError(true);
-    }
-    else{setAccessError(false);setMostrarModal(false)} 
-  };
 
   const changeModal = () => {
     setModal(!ModalR);
   };
 
+  //Abre la modal de ingresar turno
   const abrirModal = () => {
     setMostrarModal(true);
   };
 
+  //Cierra la modal de ingresar turno
   const cerrarModal = () => {
     setMostrarModal(false);
     setModal(false);
+    setAccessError(false);
+    setAccessSuccess(false);
   };
+
   const handleContentEditableClick = (e) => {
     // Detener la propagación del evento para evitar cerrar el modal
     setTextoEditable("");
     e.stopPropagation();
   };
+
+
+  //Comprueba que el ID exista en la base de datos de los tutores.
+  const comprobarId = () => {
+    console.log('ID ingresado:', id);
+
+    const comprobacion = true;
+
+    if (comprobacion){
+      setAccessSuccess(true);
+    }
+    else{setAccessError(true)} 
+  };
+
+  //Recupera el ID del input
+  const recuperarId = (event) => {
+    setId(event.target.value);
+  };
+  
   
   return(
     <>
@@ -88,15 +105,20 @@ function Admin() {
           <div className={s.box2}>
             <text className={s.subtitle}>Lee el código QR del tutor/a</text>
             <div className={s.codigoQR}>
-              <img src="/codigoQR (1).png" alt="Imagen de un código QR" className={s.image}/>
-              <input className={s.input}/>
+              <img src="/codigoQR.png" alt="Imagen de un código QR" className={s.image}/>
+              <input type="text" name="id" value={id} onChange={recuperarId} className={s.input}/>
             </div>
             <div className={s.buttons}>
-              <button className={s.button} onClick={confirmarError}>Ingresar</button>
+              <button className={s.button} onClick={comprobarId} >Ingresar</button>
               <button className={s.button2}>Ingresar de forma manual</button>
+              {accessSuccess && (
+                <div className={s.success}>
+                  Fue ingresado correctamente
+                </div>
+              )}
               {accessError && (
                 <div className={s.error}>
-                  No existe este tutor en nuestra base de datos.
+                  No existe este tutor en nuestra base de datos
                 </div>
               )}
             </div>

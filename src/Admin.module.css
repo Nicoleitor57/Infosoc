@@ -127,6 +127,19 @@
   border: solid 1px #C23636;
   border-radius: 8px;
   color: #C23636;
+  display: flex;
+  justify-content: center;
   margin-bottom: 24px;
-  padding: 24px;
+  padding: 18px 24px;
+}
+
+.success {
+  background-color: #ECFFCB;
+  border: solid 1px #215518;
+  border-radius: 8px;
+  color: #215518;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  padding: 18px 24px;
 }
