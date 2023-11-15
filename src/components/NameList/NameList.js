@@ -4,12 +4,17 @@ import s from './NameList.module.css';
 
 function NameList(NameListProps) {
 
-  const { name, tipoTutor } = NameListProps;
+  const { name, tipoTutor, rol , rut, turnos } = NameListProps;
 
   const [ventanaAbierta, setVentanaAbierta] = useState(false);
 
   const toggleVentana = () => {
     setVentanaAbierta(!ventanaAbierta);
+  };
+
+  const handleModifyClick = () => {
+    // Add logic to handle modification here
+    console.log('Modify button clicked for:', name);
   };
 
   return (
@@ -19,6 +24,9 @@ function NameList(NameListProps) {
             <text className={s.name}>{name}</text>
             <text className={s.type}>{tipoTutor}</text>
           </div>
+          <button className={s.modifyButton} onClick={handleModifyClick}>
+              Modificar
+          </button>
           {!ventanaAbierta && (
             <button className={s.icon} onClick={toggleVentana}>
               <img src="Arroy-Down.svg" alt="Flecha hacia abajo"/>
@@ -31,10 +39,11 @@ function NameList(NameListProps) {
           )}
         </div>
           {ventanaAbierta && (
-            <OpenNameList nombre={name} cargo={tipoTutor} />
+            <OpenNameList nombre={name} cargo={tipoTutor} rol={rol} rut={rut} turnos={turnos}/>
           )}
     </section>
   );
 }
+
 
 export default NameList;
