@@ -13,96 +13,56 @@ import axios from 'axios';
 function Admin() {
   const [editing] = useState(false);
   const [mostrarModal, setMostrarModal] = useState(false);
+  const [data] = useState([]);
+  const [id, setId] = useState('');
+  const [accessError, setAccessError] = useState(false);
+  const [accessSuccess, setAccessSuccess] = useState(false);
+
   const [ModalR, setModal] = useState(false);
   const [textoEditable, setTextoEditable] = useState("Ingresa tu texto aquí...");
-  const [accessError , setAccessError] = useState(false);
-  //data axios.get('http://localhost:9000/api/tutores') 
-
-  const confirmarError = () => {
-    //consulta api si tutor pertenece al bloque
-    const res = false
-    if (!res){
-      setAccessError(true);
-    }
-    else{setAccessError(false);setMostrarModal(false)} 
-  };
+  //axios.get('http://localhost:9000/api/tutores') 
 
   const changeModal = () => {
     setModal(!ModalR);
   };
 
+  //Abre la modal de ingresar turno
   const abrirModal = () => {
     setMostrarModal(true);
   };
 
+  //Cierra la modal de ingresar turno
   const cerrarModal = () => {
     setMostrarModal(false);
     setModal(false);
+    setAccessError(false);
+    setAccessSuccess(false);
   };
+
   const handleContentEditableClick = (e) => {
     // Detener la propagación del evento para evitar cerrar el modal
     setTextoEditable("");
     e.stopPropagation();
   };
 
-  const DesplegarTutores = () => {
-    const [data, setData] = useState([]);
-    // Realiza una solicitud GET a la API
-    axios.get('http://localhost:9000/api/tutores')
-    .then(response => {
-      const apiData = response.data;
-      console.log('Data de la API:', apiData); // Muestra la data en la consola
-      setData(apiData); // Almacena los datos en el estado del componente
-    })
-    .catch(error => {
-      console.error('Error al obtener datos de la API', error);
-    });
 
+  //Comprueba que el ID exista en la base de datos de los tutores.
+  const comprobarId = () => {
+    console.log('ID ingresado:', id);
 
+    const comprobacion = true;
 
-    const [states, SetState] = useState([]);
-    
-  
-    useEffect(() => {
-  
-      const initialStates = data.map(()=>0);
-      SetState(initialStates);
-  
-    },[data]);
-  
-    const updateStates = (idTutor, newState) => {
-      SetState((previousStates) => {
-        const index = data.findIndex((item)=> item.id === idTutor);
-        const newStates = [...previousStates];
-  
-        newStates[index] = newState;
-        
-        return newStates;
-      })
-    };
-  
-    return (
-      data.map((item, index) => (         
-        <Turno
-          name={item.name}
-          tipoTutor={item.tipoTutor}
-          state={
-            states[index] === 0 ? 'Ausente' :
-            states[index] === 1 ? 'En turno' :
-            states[index] === 2 ? 'Reemplazado' :
-            'Estado desconocido'
-          }
-        />
-      ))
-    );
+    if (comprobacion){
+      setAccessSuccess(true);
+    }
+    else{setAccessError(true)} 
   };
 
-
-
-
-
-
-
+  //Recupera el ID del input
+  const recuperarId = (event) => {
+    setId(event.target.value);
+  };
+  
   
   return(
     <>
@@ -129,21 +89,26 @@ function Admin() {
                 <div className={s.title}>
             <h2>Ingresar turno</h2>
             <button onClick={cerrarModal} className={s.icon}>
-              <img src="/close.svg" alt="Icono cerrar"/>
+              <img src="images/close.svg" alt="Icono cerrar"/>
             </button>
           </div>
           <div className={s.box2}>
             <text className={s.subtitle}>Lee el código QR del tutor/a</text>
             <div className={s.codigoQR}>
-              <img src="/codigoQR (1).png" alt="Imagen de un código QR" className={s.image}/>
-              <input className={s.input}/>
+              <img src="images/codigoQR.png" alt="Imagen de un código QR" className={s.image}/>
+              <input type="text" name="id" value={id} onChange={recuperarId} className={s.input}/>
             </div>
             <div className={s.buttons}>
-              <button className={s.button} onClick={confirmarError}>Ingresar</button>
+              <button className={s.button} onClick={comprobarId} >Ingresar</button>
               <button className={s.button2}>Ingresar de forma manual</button>
+              {accessSuccess && (
+                <div className={s.success}>
+                  Fue ingresado correctamente
+                </div>
+              )}
               {accessError && (
                 <div className={s.error}>
-                  No existe este tutor en nuestra base de datos.
+                  No existe este tutor en nuestra base de datos
                 </div>
               )}
             </div>
