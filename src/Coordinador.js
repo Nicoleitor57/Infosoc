@@ -21,7 +21,7 @@ function Coordinador() {
         <text>Lista de tutores y administradores</text>
         <NameList name="Vicente Wofwofwof" tipoTutor="Tutor/a sex"/>
         <NameList name="Christian Barrios" tipoTutor="full stack developer"/>
-        <NameList name="Sofía Ríos" tipoTutor="Tutor/a Programación"/>
+        <NameList name="Sofía Ríos" tipoTutor="Delegada de genero"/>
         <button onClick={abrirModal} className={s.button}>Ingresar tutor</button>
       </div>
       
