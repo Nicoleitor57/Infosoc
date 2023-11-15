@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './Admin.module.css';
 import './ModalReemp.css';
 import Header from "./components/Header/Header";
@@ -12,10 +12,13 @@ const Arreglo = [{"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor
 function Admin() {
   const [editing] = useState(false);
   const [mostrarModal, setMostrarModal] = useState(false);
+  const [mostrarForm, setMostrarForm] = useState(false);
   const [data] = useState([]);
-  const [id, setId] = useState('');
+  const [ id, setId ] = useState('');
+  const [ rol, setRol ] = useState('');
   const [accessError, setAccessError] = useState(false);
   const [accessSuccess, setAccessSuccess] = useState(false);
+  const [ inputError, setInputError ] = useState(false);
 
   const [ModalR, setModal] = useState(false);
   const [textoEditable, setTextoEditable] = useState("Ingresa tu texto aquí...");
@@ -25,6 +28,12 @@ function Admin() {
     setModal(!ModalR);
   };
 
+  //Abre el modal para ingresar turno manual
+  const changeForm = () => {
+    setMostrarModal(false);
+    setMostrarForm(!mostrarForm);
+  };
+
   //Abre la modal de ingresar turno
   const abrirModal = () => {
     setMostrarModal(true);
@@ -32,10 +41,11 @@ function Admin() {
 
   //Cierra la modal de ingresar turno
   const cerrarModal = () => {
-    setMostrarModal(false);
     setModal(false);
+    setMostrarModal(false);
     setAccessError(false);
     setAccessSuccess(false);
+    
   };
 
   const handleContentEditableClick = (e) => {
@@ -49,17 +59,54 @@ function Admin() {
   const comprobarId = () => {
     console.log('ID ingresado:', id);
 
+    if(id === ''){
+      setInputError(true);
+    }
+
     const comprobacion = true;
 
-    if (comprobacion){
+    if (comprobacion && id !== ''){
       setAccessSuccess(true);
     }
-    else{setAccessError(true)} 
+    if (!comprobacion && id !== ''){
+      setAccessError(true)
+    } 
+  };
+
+  useEffect(()=>{
+    setInputError(false);
+    console.log("--------lol-----");
+  },[inputError]);
+
+  //Comprueba que el rol exista en la base de datos de los tutores.
+  const comprobarRol = () => {
+    
+    console.log('Rol ingresado:', rol);
+
+    const comprobacion = true;
+
+    if(rol === ''){
+      setInputError(true);
+    }
+
+    if (comprobacion && rol !== ''){
+      setAccessSuccess(true);
+    }
+
+    if(!comprobacion && rol !== ''){
+      setAccessError(true)
+    } 
+
   };
 
   //Recupera el ID del input
   const recuperarId = (event) => {
     setId(event.target.value);
+  };
+
+  //Recupera el rol del input
+  const recuperarRol = (event) => {
+    setRol(event.target.value);
   };
   
   
@@ -106,11 +153,13 @@ function Admin() {
             <text className={s.subtitle}>Lee el código QR del tutor/a</text>
             <div className={s.codigoQR}>
               <img src="images/codigoQR.png" alt="Imagen de un código QR" className={s.image}/>
-              <input type="text" name="id" value={id} onChange={recuperarId} className={s.input}/>
+              <input type="text" name="id" value={id} onChange={recuperarId} className={`${inputError ? s.inputError : s.input}`}
+/>
             </div>
             <div className={s.buttons}>
-              <button className={s.button} onClick={comprobarId} >Ingresar</button>
-              <button className={s.button2}>Ingresar de forma manual</button>
+              <button className={s.button} onClick={comprobarId}>Ingresar</button>
+              <button onClick={changeForm} className={s.button2}>Ingresar de forma manual</button>
+            </div>
               {accessSuccess && (
                 <div className={s.success}>
                   Fue ingresado correctamente
@@ -121,12 +170,51 @@ function Admin() {
                   No existe este tutor en nuestra base de datos
                 </div>
               )}
-            </div>
           </div>
         </section>
           </div>
        </div>
       </div>
+    )}
+    {mostrarForm && (
+      <div className={`overlay ${mostrarForm ? 'show' : 'hide'}`}>
+      <div className={`modal ${mostrarForm ? 'show' : 'hide'}`}>
+        <div className='modal-content'>
+            <section className={s.form}>
+              <div className={s.title}>
+          <h2>Ingresar turno manualmente</h2>
+          <button onClick={changeForm} className={s.icon}>
+            <img src="images/close.svg" alt="Icono cerrar"/>
+          </button>
+        </div>
+        <div className={s.box2}>
+          <div className={s.label}>
+            <label>Rol:</label>
+            <input type="text" name="rol" value={rol} onChange={recuperarRol} className={`${inputError ? s.inputError : s.input}`}/>
+          </div>
+          <div className={s.buttons}>
+            <button 
+            className={s.button} 
+            onClick={comprobarRol}>
+              Ingresar
+            </button>
+          </div>
+        </div>
+            {accessSuccess && (
+              <div className={s.success}>
+                Fue ingresado correctamente
+              </div>
+            )}
+            {accessError && (
+              <div className={s.error}>
+                No existe este tutor en nuestra base de datos
+              </div>
+            )}
+      </section>
+        </div>
+      </div>
+    </div>
+                  
     )}
     {ModalR && (
       <div className={`overlay ${ModalR ? 'show' : 'hide'}`} onClick={changeModal}>
