@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import s from './Admin.module.css';
-import Header from "./components/Header/Header";
-import InfoBloque from "./components/InfoBloque/InfoBloque";
-import Modal from "./components/Modal/Modal";
-import Turno from "./components/Turno/Turno";
+import Header from "../components/Header/Header";
+import InfoBloque from "../components/InfoBloque/InfoBloque";
+import Modal from "../components/Modal/Modal";
+import Turno from "../components/Turno/Turno";
 import './styles.css';
 import axios from 'axios';
 

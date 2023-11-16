@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Coordinador.module.css';
-import NameList from './components/NameList/NameList';
-import Header from "./components/Header/Header";
+import NameList from '../components/NameList/NameList';
+import Header from "../components/Header/Header";
 
 function Coordinador() {
   //const [mostrarModal, setMostrarModal] = useState(false);

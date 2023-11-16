@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Admin from './Admin';
-import AdminLoginPage from './AdminLoginPage';
-import Coordinador from './Coordinador';
-import CoordinadorLoginPage from './CoordinadorLoginPage';
+import Admin from './Admin/Admin';
+import AdminLoginPage from './Login/AdminLoginPage';
+import Coordinador from './Coordinador/Coordinador';
+import CoordinadorLoginPage from './Login/CoordinadorLoginPage';
 import Horario from './Horario';
-import Login from './Login';
-import RoleSelectionPage from './RoleSelectionPage';
-import TutorLoginPage from './TutorLoginPage';
+import Login from './Login/Login';
+import RoleSelectionPage from './Login/RoleSelectionPage';
+import TutorLoginPage from './Login/TutorLoginPage';
 
 import VentanaDeAusencias from "./pages/VentanaDeAusencias";
 import VentanaDeHoras from "./pages/VentanaDeHoras";

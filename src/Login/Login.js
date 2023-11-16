@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import testUser from './testUser';
-import frame_2 from './images/Frame_2.png';
-import ciacpng from './images/Ciac.png';  
+import testUser from '../testUser';
+import frame_2 from '../images/Frame_2.png';
+import ciacpng from '../images/Ciac.png';  
 import {useParams, useNavigate} from 'react-router-dom';
 
 function Login({ role }) {
