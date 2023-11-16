@@ -28,10 +28,7 @@ const userSchema = mongoose.Schema({
         require : true,
         default: 0
     },
-    
-    //LUN1-2
-    //Falta agregar estadisticas
-})
+});
 
 module.exports = mongoose.model('User', userSchema)
 
