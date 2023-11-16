@@ -8,10 +8,13 @@ function Header() {
     <section className={s.header}>
       <img src="/Logo.svg" alt="Logo" className={s.logo}/>
       <div className={s.links}>
-        <Link to="/Admin">
+        <Link to="/">
           <button className={s.button}>Home</button>
         </Link>
-        <Link to="/Login">
+        <Link to="/">
+          <button className={s.button}>Ingresar turno</button>
+        </Link>
+        <Link to="/">
           <button className={s.button}>Cerrar sesión</button>
         </Link>
       </div>

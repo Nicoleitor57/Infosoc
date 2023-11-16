@@ -10,6 +10,7 @@ router.post('/tutores', (req, res) =>{
     user.save().then((data) => res.json(data)).catch((error) => res.json({message: error}))
 });
 
+
 //Seleccionar todos los usuarios
 
 router.get('/tutores', (req, res) =>{

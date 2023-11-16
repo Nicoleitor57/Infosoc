@@ -13,7 +13,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
 });
-
+console.log("GAARAAAAA ------")
 //middlware
 app.use(express.json());
 app.use('/api', rutaTutores)

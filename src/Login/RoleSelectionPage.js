@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './css_files/text.css';
-import ciacpng from './images/Ciac.png';
-import frame_2 from './images/Frame_2.png';
+import '../css_files/text.css';
+import ciacpng from '../images/Ciac.png';
+import frame_2 from '../images/Frame_2.png';
+import {useState,useEffect} from 'react';
 
 function RoleSelectionPage() {
 
-  const [selectedRole, setSelectedRole] = React.useState(''); 
+  const [selectedRole, setSelectedRole] = useState(''); 
   const handleRoleSelection = (e) => {
     setSelectedRole(e.target.value);
   };
