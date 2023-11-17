@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 
 function Coordinador() {
 
-  const tutores = [
+  const [tutores, setTurores] = useState([
     {
       nombre: "Vicente Luongo",
       tipoTutor: "Tutor/a Programación",
@@ -29,9 +29,6 @@ function Coordinador() {
       rut : "55667788-9",
       turnos : ["lunes 1-2", "viernes 7-8"],
     },
-<<<<<<< Updated upstream
-  ];
-=======
   ]);
 
   const [isAddingTutor, setIsAddingTutor] = useState(false);
@@ -45,11 +42,6 @@ function Coordinador() {
     console.log('Tutor attributes:', tutorAttributes);
     setIsAddingTutor(false);
   };
-
-  const handleCancelAddTutor = () => {
-    setIsAddingTutor(false);
-  };
->>>>>>> Stashed changes
 
   return (
     <>
@@ -69,11 +61,6 @@ function Coordinador() {
 
             />
           ))}
-<<<<<<< Updated upstream
-          <button className={s.button}>Añadir tutor</button>
-        </div>
-      </section>
-=======
           <button className={s.button} onClick={handleAddTutorClick} >
             Añadir tutor
           </button>
@@ -82,7 +69,6 @@ function Coordinador() {
       {isAddingTutor && (
         <TutorForm onClose={handleCancelAddTutor} onSave={handleSaveTutor} />
       )}
->>>>>>> Stashed changes
     </>
   );
 }
