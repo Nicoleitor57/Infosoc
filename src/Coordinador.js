@@ -3,11 +3,13 @@ import s from './Coordinador.module.css';
 import NameList from './components/NameList/NameList';
 import Header from "./components/Header/Header";
 import React, { useState } from 'react';
+import TutorForm from './components/TutorForm/TutorForm';
+
 
 
 function Coordinador() {
 
-  const tutores = [
+  const [tutores, setTurores] = useState([
     {
       nombre: "Vicente Luongo",
       tipoTutor: "Tutor/a Programación",
@@ -29,7 +31,30 @@ function Coordinador() {
       rut : "55667788-9",
       turnos : ["lunes 1-2", "viernes 7-8"],
     },
-  ];
+  ]);
+
+  const [isAddingTutor, setIsAddingTutor] = useState(false);
+
+  const handleAddTutorClick = () => {
+    setIsAddingTutor(true);
+  };
+
+  const handleSaveTutor = (newTutor) => {
+    setTurores((prevTutores) => [...prevTutores, newTutor]);
+    setIsAddingTutor(false);
+  };
+
+  const handleCancelAddTutor = () => {
+    setIsAddingTutor(false);
+  };
+
+  const handleModifyTutor = (tutorIndex, modifiedAttributes) => {
+    setTurores((prevTutores) => {
+      const newTutores = [...prevTutores];
+      newTutores[tutorIndex] = { ...newTutores[tutorIndex], ...modifiedAttributes };
+      return newTutores;
+    });
+  };
 
   return (
     <>
@@ -38,6 +63,7 @@ function Coordinador() {
         <h1>¡Bienvenido/a</h1>
         <div className={s.list}>
           <p>Lista de tutores y administradores</p>
+          
           {tutores.map((tutor, index) => (
             <NameList
               key={index}
@@ -46,12 +72,18 @@ function Coordinador() {
               rol={tutor.rol}
               rut={tutor.rut}
               turnos={tutor.turnos}
-
+              onModify={(modifiedAttributes) => handleModifyTutor(index, modifiedAttributes)}
             />
           ))}
-          <button className={s.button}>Añadir tutor</button>
+          <button className={s.button} onClick={handleAddTutorClick}>
+            Añadir tutor
+          </button>
         </div>
       </section>
+
+      {isAddingTutor && (
+        <TutorForm onClose={handleCancelAddTutor} onSave={handleSaveTutor} />
+      )}
     </>
   );
 }
