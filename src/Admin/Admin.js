@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import Header from "../components/Header/Header";
 import InfoBloque from "../components/InfoBloque/InfoBloque";
 import Turno from "../components/Turno/Turno";
+import Wrapper from "../components/Wrapper/Wrapper";
 import '../styles.css';
 import s from './Admin.module.css';
 import './ModalReemp.css';
 
 const Arreglo = [
-  {"nombre":"Christian Barrios", "estado": "En turno", "tipoTutor" : "Tutor/a de Mat/Fis", "bloque": "3-4"}, 
-  {"nombre":"Sofia Rios", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis", "bloque": "3-4"},
-  {"nombre":"Vicente Luongo", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis", "bloque": "5-6"},
-  {"nombre":"Gabriel Venegas", "estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis", "bloque": "7-8"},
+  {"nombre":"Christian Barrios", "Estado": 0, "tipoTutor" : "Tutor/a de Mat/Fis", "bloque": "3-4"}, 
+  {"nombre":"Sofia Rios", "Estado": 1, "tipoTutor" : "Tutor/a de Química", "bloque": "3-4"},
+  {"nombre":"Vicente Luongo", "Estado": 2, "tipoTutor" : "Tutor/a de Mat/Fis", "bloque": "5-6"},
+  {"nombre":"Gabriel Venegas", "Estado": "Ausente", "tipoTutor" : "Tutor/a de Mat/Fis", "bloque": "7-8"},
 ];
 
 function Admin() {
-  const [editing] = useState(false);
   const [mostrarModal, setMostrarModal] = useState(false);
   const [mostrarForm, setMostrarForm] = useState(false);
   const [data] = useState([]);
@@ -26,7 +26,6 @@ function Admin() {
   const bloques = ['1-2','3-4','5-6','7-8','9-10','11-12'];
   const [bloqueActualIndex, setBloqueActualIndex] = useState(0);
   const [ModalR, setModal] = useState(false);
-  const [textoEditable, setTextoEditable] = useState("Ingresa tu texto aquí...");
   //axios.get('http://localhost:9000/api/tutores') 
 
   const changeModal = () => {
@@ -72,20 +71,27 @@ function Admin() {
     } 
   };
 
-  const inputErrorFuntion = () => {
+  const inputErrorFunction = () => {
+    let hasError = false;
 
-    if(rol === ''){
-      setInputError(true);
+    console.log("Aqui", inputError);
+    console.log(id);
+  
+    if (rol === '') {
+      hasError = true;
     }
-    
-    if(id === ''){
-      setInputError(true);
+  
+    if (id === '') {
+      hasError = true;
     }
+  
+    setInputError(hasError);
 
+    console.log("MAs abajo", inputError);
+  
     setTimeout(() => {
       setInputError(false);
     }, 500);
-
   };
   
   const cambiarBloque = (indice) => {
@@ -124,19 +130,8 @@ function Admin() {
   return(
     <>
     <Header/>
-    <article className={s.wrapper}>
-      <div className={s.title}>
-        <h1>Turnos actuales</h1>
-        <div className={s.bloque}>
-          <button className={s.icon}>
-              <img src="images/arrow-left.svg" alt="Flecha hacia la izquierda" onClick={() => cambiarBloque(-1)}/>
-          </button>
-          <span className={s.bloqueName}>{bloques[bloqueActualIndex]}</span>
-          <button className={s.icon}>
-              <img src="images/arrow-right.svg" alt="Flecha hacia la izquierda" onClick={() => cambiarBloque(1)}/>
-          </button>
-        </div>
-      </div>
+    <Wrapper>
+      <h1>Turnos actuales</h1>
       <div className={s.box}>
         <div className={s.turnos}>
         {Arreglo.filter(item => item.bloque === bloques[bloqueActualIndex]).map((item) => (         
@@ -152,9 +147,24 @@ function Admin() {
             }
           />
         ))}
+        {Arreglo.filter(item => item.bloque === bloques[bloqueActualIndex]).length === 0 && (
+                <div className={s.noTutores}>
+                  No hay tutores en este bloque 
+                </div>
+              )}
         </div>
-        <div className={s.block}>
-          <InfoBloque name="Axel Kaempffer" bloque="3-4"/>
+        <div className={s.infoBloque}>
+          <InfoBloque name="Axel Kaempffer">
+            <div className={s.bloque}>
+              <button className={s.icon}>
+                  <img src="images/arrow-left.svg" alt="Flecha hacia la izquierda" onClick={() => cambiarBloque(-1)}/>
+              </button>
+              <span className={s.bloqueName}>{bloques[bloqueActualIndex]}</span>
+              <button className={s.icon}>
+                  <img src="images/arrow-right.svg" alt="Flecha hacia la izquierda" onClick={() => cambiarBloque(1)}/>
+              </button>
+            </div>
+          </InfoBloque>
           <button className={s.button3} onClick={abrirModal}>Ingresar turno</button>
           <button className={s.button3} onClick={changeModal}>Ingresar reemplazo</button>
         </div>
@@ -179,7 +189,7 @@ function Admin() {
               <input type="text" name="id" value={id} onChange={recuperarId} className={`${inputError ? s.inputError : s.input}`}/>
             </div>
             <div className={s.buttons}>
-              <button className={s.button} onClick={() => { comprobarId(); inputErrorFuntion(); }}>Ingresar</button>
+              <button className={s.button} onClick={() => { inputErrorFunction(); comprobarId(); }}>Ingresar</button>
               <button onClick={changeForm} className={s.button2}>Ingresar de forma manual</button>
             </div>
               {accessSuccess && (
@@ -217,7 +227,7 @@ function Admin() {
           <div className={s.buttons}>
             <button 
             className={s.button} 
-            onClick={() => { comprobarRol(); inputErrorFuntion(); }}>
+            onClick={() => { comprobarRol(); inputErrorFunction(); }}>
               Ingresar
             </button>
           </div>
@@ -257,7 +267,7 @@ function Admin() {
           <div className={s.buttons}>
             <button 
             className={s.button} 
-            onClick={() => { comprobarRol(); inputErrorFuntion(); }}>
+            onClick={() => { comprobarRol(); inputErrorFunction(); }}>
               Ingresar
             </button>
           </div>
@@ -277,7 +287,7 @@ function Admin() {
       </div>
     </div>
     )}
-    </article>
+    </Wrapper>
     </>
   );
 }

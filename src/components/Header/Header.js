@@ -12,9 +12,6 @@ function Header() {
           <button className={s.button}>Home</button>
         </Link>
         <Link to="/">
-          <button className={s.button}>Ingresar turno</button>
-        </Link>
-        <Link to="/">
           <button className={s.button}>Cerrar sesión</button>
         </Link>
       </div>
