@@ -1,4 +1,4 @@
-
+// Modify.js
 import React, { useState } from 'react';
 import s from './Modify.module.css';
 
@@ -13,27 +13,32 @@ function Modify(ModifyProps) {
     cargo,
     rol,
     rut,
-    selectedTurnoIndex: -1, // Index of the selected turno to modify
-    turnos: turnos.map((turno) => ({ day: turno.split(' ')[0], hour: turno.split(' ')[1] })),
+    selectedTurnoIndex: -1,
+    turnos: turnos.map(turno => ({ day: turno.split(' ')[0], hour: turno.split(' ')[1] })),
     selectedDay: '',
     selectedHour: '',
-    isAddingTurno : false,
   });
 
   const handleAttributeChange = (attribute, value) => {
-    setModifiedAttributes((prevAttributes) => ({ ...prevAttributes, [attribute]: value }));
+    setModifiedAttributes(prevAttributes => ({ ...prevAttributes, [attribute]: value }));
   };
 
-  const handleDayChange = (e) => {
+  const handleDayChange = e => {
     handleAttributeChange('selectedDay', e.target.value);
   };
 
-  const handleHourChange = (e) => {
+  const handleHourChange = e => {
     handleAttributeChange('selectedHour', e.target.value);
   };
 
-  const handleModifyTurnoClick = (index) => {
-    setModifiedAttributes((prevAttributes) => ({
+  const handleAttributeSubmit = e => {
+    e.preventDefault();
+    // Apply logic to update tutor attributes
+    console.log('Modified attributes:', modifiedAttributes);
+  };
+
+  const handleModifyTurnoClick = index => {
+    setModifiedAttributes(prevAttributes => ({
       ...prevAttributes,
       selectedTurnoIndex: index,
       selectedDay: prevAttributes.turnos[index].day,
@@ -49,30 +54,40 @@ function Modify(ModifyProps) {
     handleAttributeChange('selectedHour', '');
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // Add logic to handle form submission (e.g., update tutor attributes)
-    console.log('Modified attributes:', modifiedAttributes);
-  };
-
   return (
     <div className={s.info}>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleAttributeSubmit}>
         <div className={s.text}>
           <label className={s.textbold}>Nombre:</label>
-          <text>{nombre}</text>
+          <input
+            type="text"
+            value={modifiedAttributes.nombre}
+            onChange={e => handleAttributeChange('nombre', e.target.value)}
+          />
         </div>
         <div className={s.text}>
           <label className={s.textbold}>Cargo:</label>
-          <text>{cargo}</text>
+          <input
+            type="text"
+            value={modifiedAttributes.cargo}
+            onChange={e => handleAttributeChange('cargo', e.target.value)}
+          />
         </div>
         <div className={s.text}>
           <label className={s.textbold}>Rol:</label>
-          <text>{rol}</text>
+          <input
+            type="text"
+            value={modifiedAttributes.rol}
+            onChange={e => handleAttributeChange('rol', e.target.value)}
+          />
         </div>
         <div className={s.text}>
           <label className={s.textbold}>Rut:</label>
-          <text>{rut}</text>
+          <input
+            type="text"
+            value={modifiedAttributes.rut}
+            onChange={e => handleAttributeChange('rut', e.target.value)}
+          />
         </div>
         <div className={s.text}>
           <label className={s.textbold}>Turnos:</label>
@@ -87,35 +102,31 @@ function Modify(ModifyProps) {
             ))}
           </ul>
         </div>
-        {modifiedAttributes.selectedTurnoIndex !== -1 && (
-          <>
-            <div className={s.text}>
-              <label className={s.textbold}>Día:</label>
-              <select value={modifiedAttributes.selectedDay} onChange={handleDayChange}>
-                <option value="">Select Day</option>
-                {daysOptions.map((day) => (
-                  <option key={day} value={day}>
-                    {day}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className={s.text}>
-              <label className={s.textbold}>Hora:</label>
-              <select value={modifiedAttributes.selectedHour} onChange={handleHourChange}>
-                <option value="">Select Hour</option>
-                {hoursOptions.map((hour) => (
-                  <option key={hour} value={hour}>
-                    {hour}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <button type="button" onClick={handleAddTurno}>
-              Add Turno
-            </button>
-          </>
-        )}
+        <div className={s.text}>
+          <label className={s.textbold}>Día:</label>
+          <select value={modifiedAttributes.selectedDay} onChange={handleDayChange}>
+            <option value="">Select Day</option>
+            {daysOptions.map(day => (
+              <option key={day} value={day}>
+                {day}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={s.text}>
+          <label className={s.textbold}>Hora:</label>
+          <select value={modifiedAttributes.selectedHour} onChange={handleHourChange}>
+            <option value="">Select Hour</option>
+            {hoursOptions.map(hour => (
+              <option key={hour} value={hour}>
+                {hour}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button type="button" onClick={handleAddTurno}>
+          Add Turno
+        </button>
         <button type="submit">Guardar cambios</button>
       </form>
     </div>

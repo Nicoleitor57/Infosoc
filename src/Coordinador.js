@@ -3,6 +3,8 @@ import s from './Coordinador.module.css';
 import NameList from './components/NameList/NameList';
 import Header from "./components/Header/Header";
 import React, { useState } from 'react';
+import TutorForm from './components/TutorForm/TutorForm';
+
 
 
 function Coordinador() {
@@ -37,10 +39,26 @@ function Coordinador() {
     setIsAddingTutor(true);
   };
 
-  const handleSaveTutor = (tutorAttributes) => {
-    setTurores((prevTutores) => [...prevTutores, tutorAttributes]);
-    console.log('Tutor attributes:', tutorAttributes);
+  const handleSaveTutor = (newTutor) => {
+    setTurores((prevTutores) => [...prevTutores, newTutor]);
     setIsAddingTutor(false);
+  };
+
+  const handleCancelAddTutor = () => {
+    setIsAddingTutor(false);
+  };
+
+  const handleModifyTutor = (tutorIndex, modifiedAttributes) => {
+    setTurores((prevTutores) => {
+      const newTutores = [...prevTutores];
+      newTutores[tutorIndex] = { ...newTutores[tutorIndex], ...modifiedAttributes };
+      return newTutores;
+    });
+  };
+
+  const handleDeleteTutor = (tutorName) => {
+    setTurores((prevTutores) => prevTutores.filter((tutor) => tutor.nombre !== tutorName));
+    //logica para eliminar tutor de la base de datos
   };
 
   return (
@@ -50,6 +68,7 @@ function Coordinador() {
         <h1>¡Bienvenido/a</h1>
         <div className={s.list}>
           <p>Lista de tutores y administradores</p>
+          
           {tutores.map((tutor, index) => (
             <NameList
               key={index}
@@ -58,14 +77,16 @@ function Coordinador() {
               rol={tutor.rol}
               rut={tutor.rut}
               turnos={tutor.turnos}
-
+              onModify={(modifiedAttributes) => handleModifyTutor(index, modifiedAttributes)}
+              onDelete={handleDeleteTutor}
             />
           ))}
-          <button className={s.button} onClick={handleAddTutorClick} >
+          <button className={s.button} onClick={handleAddTutorClick}>
             Añadir tutor
           </button>
         </div>
       </section>
+
       {isAddingTutor && (
         <TutorForm onClose={handleCancelAddTutor} onSave={handleSaveTutor} />
       )}
